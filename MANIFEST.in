@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include danamas *.css
+recursive-include danamas *.csv
+recursive-include danamas *.html
+recursive-include danamas *.ico
+recursive-include danamas *.js
+recursive-include danamas *.json
+recursive-include danamas *.md
+recursive-include danamas *.png
+recursive-include danamas *.py
+recursive-include danamas *.svg
+recursive-include danamas *.txt
+recursive-exclude danamas *.pyc
