@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-06-23 11:51:26.616929",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sentreceived",
+  "from",
+  "to",
+  "message",
+  "media_link",
+  "stats",
+  "send_on",
+  "reference_doctype",
+  "reference_document_name",
+  "profile_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "from",
+   "fieldtype": "Data",
+   "label": "From"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "label": "To"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Long Text",
+   "label": "Message"
+  },
+  {
+   "fieldname": "sentreceived",
+   "fieldtype": "Select",
+   "label": "Sent/Received",
+   "options": "Sent\nReceived"
+  },
+  {
+   "fieldname": "media_link",
+   "fieldtype": "Data",
+   "label": "Media Link"
+  },
+  {
+   "fieldname": "stats",
+   "fieldtype": "Select",
+   "label": "Stats",
+   "options": "\nQueued\nSent\nReceived\nDelivered\nRead\nUndelivered\nError"
+  },
+  {
+   "fieldname": "send_on",
+   "fieldtype": "Datetime",
+   "label": "Send On"
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "Reference DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reference_document_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference Document Name",
+   "options": "reference_doctype"
+  },
+  {
+   "fieldname": "profile_name",
+   "fieldtype": "Data",
+   "label": "Profile Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-06-24 11:06:35.419968",
+ "modified_by": "Administrator",
+ "module": "Taburi",
+ "name": "WhatsApp",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

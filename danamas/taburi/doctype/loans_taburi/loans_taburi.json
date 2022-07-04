@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-06-21 02:10:47.840471",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "loans_application_section",
+  "transaction_date",
+  "customers",
+  "loan_amount",
+  "column_break_5",
+  "tenor__days_",
+  "interest___",
+  "section_break_4",
+  "saldo_taburi",
+  "section_break_10",
+  "adm_provisi",
+  "return",
+  "column_break_13",
+  "received",
+  "interest__rp_"
+ ],
+ "fields": [
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Transaction Date",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "customers",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customers",
+   "options": "Customers",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "saldo_taburi",
+   "fieldtype": "Data",
+   "label": "Saldo Taburi"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Resume"
+  },
+  {
+   "fieldname": "loan_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Loan Amount",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "adm_provisi",
+   "fieldtype": "Currency",
+   "label": "Adm Provisi",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "return",
+   "fieldtype": "Currency",
+   "label": "Return",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "default": "7",
+   "fieldname": "tenor__days_",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenor ( Days )",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "received",
+   "fieldtype": "Currency",
+   "label": "Received",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "default": "3",
+   "fieldname": "interest___",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Interest ( % )",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "loans_application_section",
+   "fieldtype": "Section Break",
+   "label": "Loans Application"
+  },
+  {
+   "fieldname": "interest__rp_",
+   "fieldtype": "Currency",
+   "label": "Interest ( Rp )",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-06-21 02:35:51.898203",
+ "modified_by": "Administrator",
+ "module": "Taburi",
+ "name": "Loans Taburi",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
