@@ -9,7 +9,7 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2022-06-18 17:33:11.442061",
+ "modified": "2022-07-04 10:44:52.264776",
  "modified_by": "Administrator",
  "module": "Taburi",
  "name": "Customers Balance",
@@ -18,13 +18,13 @@
  "query": "SELECT \r\n  customers as \"CIF:Data\",\r\n  full_name as \"Customers Name:Data/Customers Name:220\",\r\n  ao_name as \"Advisor:Data/Advisor:130\",\r\n  join_date as \"Join Date\",\r\n  sum(debit) as \"Debit:Currency/Debit:120\",\r\n  sum(credit) as \"Credit:Currency/Credit:120\",\r\n  sum(debit -credit) as \"Saldo:Currency/Saldo:120\",\r\n  sum(case when (month(join_date+interval 3 month) and time_periode = \"3 Month\") then (debit*0.5/100) else 0 end) as \"3 Month:Currency/3 Month:100\", \r\n  sum(case when (month(join_date+interval 6 month) and time_periode = \"6 Month\") then (debit*1/100) else 0 end) as \"6 Month:Currency/6 Month:100\",\r\n  sum(case when (month(join_date+interval 9 month) and time_periode = \"9 Month\") then (debit*1.5/100) else 0 end) as \"9 Month:Currency/9 Month:100\",\r\n  sum(case when (month(join_date+interval 12 month)and time_periode = \"12 Month\") then (debit*2/100) else 0 end) as \"12 Month:Currency/12 Month:100\" \r\nFROM `tabTransaction`\r\ngroup by customers",
  "ref_doctype": "Transaction",
  "report_name": "Customers Balance",
- "report_type": "Query Report",
+ "report_type": "Script Report",
  "roles": [
   {
    "role": "System Manager"
   },
   {
-   "role": "Taburi Manager"
+   "role": "DMI System"
   }
  ]
 }

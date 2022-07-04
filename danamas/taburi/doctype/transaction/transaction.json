@@ -53,22 +53,6 @@
    "label": "No Reff"
   },
   {
-   "fieldname": "debit",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Debit",
-   "non_negative": 1,
-   "precision": "0"
-  },
-  {
-   "fieldname": "credit",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Credit",
-   "non_negative": 1,
-   "precision": "0"
-  },
-  {
    "fieldname": "notes",
    "fieldtype": "Select",
    "label": "Notes",
@@ -143,11 +127,27 @@
    "fieldtype": "Data",
    "label": "Join Date",
    "read_only": 1
+  },
+  {
+   "fieldname": "debit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Credit",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "fieldname": "credit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Debit",
+   "non_negative": 1,
+   "precision": "0"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-06-24 11:13:24.929372",
+ "modified": "2022-07-04 09:41:58.181889",
  "modified_by": "Administrator",
  "module": "Taburi",
  "name": "Transaction",
