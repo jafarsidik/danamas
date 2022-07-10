@@ -7,7 +7,7 @@ from six import string_types
 from frappe.utils.password import get_decrypted_password
 from frappe.utils import get_site_url
 from frappe import _
-from ...twilio_handler import Twilio
+
 
 class WhatsApp(Document):
 	def send(self):
