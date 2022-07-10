@@ -1,0 +1,118 @@
+{
+ "charts": [
+  {
+   "chart_name": "Customers",
+   "label": "Customers"
+  },
+  {
+   "chart_name": "Saldo",
+   "label": "Saldo Taburi"
+  }
+ ],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Taburi</span>\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Customers\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Saldo Taburi\",\"col\":6}},{\"type\":\"card\",\"data\":{\"card_name\":\"Transactions\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Whatsap Blast\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reporting\",\"col\":4}}]",
+ "creation": "2022-06-18 17:29:37.440125",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 1,
+ "icon": "kanban",
+ "idx": 0,
+ "label": "Taburi",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reporting",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Customers Balance",
+   "link_count": 0,
+   "link_to": "Customers Balance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Advisor Commision",
+   "link_count": 0,
+   "link_to": "Advisor Commission",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transactions",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customers",
+   "link_count": 0,
+   "link_to": "Customers",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transactions",
+   "link_count": 0,
+   "link_to": "Transaction",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Advisor",
+   "link_count": 0,
+   "link_to": "Advisor",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "E- Statement",
+   "link_count": 0,
+   "link_to": "EStatement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2022-07-09 14:00:04.205376",
+ "modified_by": "Administrator",
+ "module": "Taburi",
+ "name": "Taburi",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "DMI System"
+  }
+ ],
+ "sequence_id": 30.0,
+ "shortcuts": [],
+ "title": "Taburi"
+}

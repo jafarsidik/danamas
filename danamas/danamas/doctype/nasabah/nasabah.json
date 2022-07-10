@@ -1,0 +1,323 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:DMI{#####}",
+ "creation": "2022-07-04 18:49:29.040974",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "data_nasabah_section",
+  "nama_lengkap",
+  "no_ktp",
+  "no_kartu_keluarga",
+  "tempat_lahir",
+  "tanggal_lahir",
+  "nama_ibu_kandung",
+  "status_perkawinan",
+  "email",
+  "no_telepon",
+  "no_hp_1",
+  "no_hp_2",
+  "no_hp_3",
+  "column_break_9",
+  "jumlah_tanggungan",
+  "pendidikan_terakhir",
+  "usaha__pekerjaan",
+  "bentuk_usaha",
+  "status_tempat_tinggal",
+  "jenis_usaha",
+  "pendapatan",
+  "desakelurahan",
+  "kecamatan",
+  "kabupatenkota",
+  "kode_pos",
+  "data_pasangan_suami__istri_section",
+  "status_hubungan",
+  "nama_pasangan",
+  "no_ktp_pasangan",
+  "column_break_30",
+  "no_telepon_pasangan",
+  "tempat_lahir_pasangan",
+  "tanggal_lahir_pasangan",
+  "keluarga_dekat_yang_tidak_tinggal_serumah_section",
+  "hubungan",
+  "nama_keluarga_dekat",
+  "notelepon_keluarga_dekat",
+  "nohp_keluarga_dekat",
+  "alamat_keluarga_dekat",
+  "column_break_37",
+  "desa_keluarga_dekat",
+  "kecamatan_keluarga_dekat",
+  "kabkot_keluarga_dekat",
+  "kodepos_keluarga_dekat",
+  "picture"
+ ],
+ "fields": [
+  {
+   "fieldname": "data_nasabah_section",
+   "fieldtype": "Section Break",
+   "label": "DATA NASABAH"
+  },
+  {
+   "fieldname": "nama_lengkap",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Lengkap",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tempat_lahir",
+   "fieldtype": "Data",
+   "label": "Tempat Lahir"
+  },
+  {
+   "fieldname": "tanggal_lahir",
+   "fieldtype": "Date",
+   "label": "Tanggal Lahir"
+  },
+  {
+   "fieldname": "no_ktp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "No KTP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_kartu_keluarga",
+   "fieldtype": "Data",
+   "label": "No Kartu Keluarga"
+  },
+  {
+   "fieldname": "nama_ibu_kandung",
+   "fieldtype": "Data",
+   "label": "Nama Ibu Kandung"
+  },
+  {
+   "fieldname": "status_perkawinan",
+   "fieldtype": "Select",
+   "label": "Status Perkawinan",
+   "options": "\nLajang\nMenikah\nDuda/Janda"
+  },
+  {
+   "fieldname": "jumlah_tanggungan",
+   "fieldtype": "Data",
+   "label": "Jumlah Tanggungan"
+  },
+  {
+   "fieldname": "pendidikan_terakhir",
+   "fieldtype": "Select",
+   "label": "Pendidikan Terakhir",
+   "options": "\nSD\nSMP\nSMA/SMK\nD1\nD2\nD3\nD4\nS1\nS2\nS3"
+  },
+  {
+   "fieldname": "usaha__pekerjaan",
+   "fieldtype": "Select",
+   "label": "Usaha / Pekerjaan",
+   "options": "\nKaryawan Swasta\nGuru/Dosen/Pengajar\nASN/PNS/Pemeritahan\nTNI/Polri\nPensiunan\nWiraswasta/UMKM"
+  },
+  {
+   "fieldname": "bentuk_usaha",
+   "fieldtype": "Select",
+   "label": "Bentuk Usaha",
+   "options": "\nPT\nCV\nYayasan\nPerorangan\nLainnya"
+  },
+  {
+   "fieldname": "status_tempat_tinggal",
+   "fieldtype": "Select",
+   "label": "Status Tempat Tinggal",
+   "options": "\nMilik Sendiri\nKeluarga\nSewa/Kontrak\nLainnya"
+  },
+  {
+   "fieldname": "jenis_usaha",
+   "fieldtype": "Data",
+   "label": "Jenis Usaha"
+  },
+  {
+   "fieldname": "pendapatan",
+   "fieldtype": "Currency",
+   "label": "Pendapatan"
+  },
+  {
+   "fieldname": "desakelurahan",
+   "fieldtype": "Data",
+   "label": "Desa/Kelurahan"
+  },
+  {
+   "fieldname": "kecamatan",
+   "fieldtype": "Data",
+   "label": "Kecamatan"
+  },
+  {
+   "fieldname": "kabupatenkota",
+   "fieldtype": "Data",
+   "label": "Kabupaten/Kota"
+  },
+  {
+   "fieldname": "kode_pos",
+   "fieldtype": "Int",
+   "label": "Kode Pos"
+  },
+  {
+   "fieldname": "no_telepon",
+   "fieldtype": "Data",
+   "label": "No Telepon"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "no_hp_1",
+   "fieldtype": "Data",
+   "label": "No HP 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_hp_2",
+   "fieldtype": "Data",
+   "label": "No HP 2"
+  },
+  {
+   "fieldname": "no_hp_3",
+   "fieldtype": "Data",
+   "label": "No HP 3"
+  },
+  {
+   "fieldname": "data_pasangan_suami__istri_section",
+   "fieldtype": "Section Break",
+   "label": "DATA PASANGAN (SUAMI / ISTRI)"
+  },
+  {
+   "fieldname": "status_hubungan",
+   "fieldtype": "Select",
+   "label": "Status Hubungan",
+   "options": "\nSuami\nIstri"
+  },
+  {
+   "fieldname": "nama_pasangan",
+   "fieldtype": "Data",
+   "label": "Nama Pasangan"
+  },
+  {
+   "fieldname": "tempat_lahir_pasangan",
+   "fieldtype": "Data",
+   "label": "Tempat Lahir Pasangan"
+  },
+  {
+   "fieldname": "tanggal_lahir_pasangan",
+   "fieldtype": "Date",
+   "label": "Tanggal Lahir Pasangan"
+  },
+  {
+   "fieldname": "no_ktp_pasangan",
+   "fieldtype": "Data",
+   "label": "No KTP Pasangan"
+  },
+  {
+   "fieldname": "no_telepon_pasangan",
+   "fieldtype": "Data",
+   "label": "No Telepon Pasangan"
+  },
+  {
+   "fieldname": "keluarga_dekat_yang_tidak_tinggal_serumah_section",
+   "fieldtype": "Section Break",
+   "label": "KELUARGA DEKAT (YANG TIDAK TINGGAL SERUMAH)"
+  },
+  {
+   "fieldname": "nama_keluarga_dekat",
+   "fieldtype": "Data",
+   "label": "Nama"
+  },
+  {
+   "fieldname": "alamat_keluarga_dekat",
+   "fieldtype": "Small Text",
+   "label": "Alamat Tinggal Saat init"
+  },
+  {
+   "fieldname": "desa_keluarga_dekat",
+   "fieldtype": "Data",
+   "label": "Desa/Kelurahan"
+  },
+  {
+   "fieldname": "kecamatan_keluarga_dekat",
+   "fieldtype": "Data",
+   "label": "Kecamatan"
+  },
+  {
+   "fieldname": "kabkot_keluarga_dekat",
+   "fieldtype": "Data",
+   "label": "Kabupaten/Kota"
+  },
+  {
+   "fieldname": "kodepos_keluarga_dekat",
+   "fieldtype": "Data",
+   "label": "Kode Pos"
+  },
+  {
+   "fieldname": "notelepon_keluarga_dekat",
+   "fieldtype": "Data",
+   "label": "No Telepon"
+  },
+  {
+   "fieldname": "nohp_keluarga_dekat",
+   "fieldtype": "Data",
+   "label": "No HP"
+  },
+  {
+   "fieldname": "hubungan",
+   "fieldtype": "Data",
+   "label": "Hubungan"
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Picture"
+  }
+ ],
+ "image_field": "picture",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-04 19:32:34.417952",
+ "modified_by": "Administrator",
+ "module": "Danamas",
+ "name": "Nasabah",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "nama_lengkap,no_ktp",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

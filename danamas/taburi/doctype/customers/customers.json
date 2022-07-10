@@ -1,0 +1,216 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:TH-{####}",
+ "creation": "2022-06-18 00:02:40.914391",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_identity_tab",
+  "personal_identity_section",
+  "full_name",
+  "gender",
+  "marital_status",
+  "educations",
+  "jobs",
+  "mother_name",
+  "column_break_9",
+  "address",
+  "contact_section",
+  "phone_number",
+  "second_phone_number",
+  "column_break_14",
+  "email",
+  "account_aplication",
+  "picture",
+  "package_taburi_tab",
+  "saving_method",
+  "schedule_pick_up",
+  "saving_goals",
+  "column_break_22",
+  "join_date",
+  "time_period",
+  "advisor"
+ ],
+ "fields": [
+  {
+   "fieldname": "personal_identity_tab",
+   "fieldtype": "Tab Break",
+   "label": "Personal Identity"
+  },
+  {
+   "fieldname": "personal_identity_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Identity"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "Belum Kawin\nKawin\nCerai Hidup\nCerai Mati"
+  },
+  {
+   "fieldname": "educations",
+   "fieldtype": "Select",
+   "label": "Educations",
+   "options": "SD\nSMP\nSMA\nDIPLOMA\nS1\nS2\nS3"
+  },
+  {
+   "fieldname": "jobs",
+   "fieldtype": "Select",
+   "label": "Jobs",
+   "options": "Wiraswasta\nKaryawan\nIbu Rumah Tangga\nTNI/Polri\nPNS"
+  },
+  {
+   "fieldname": "mother_name",
+   "fieldtype": "Data",
+   "label": "Mother Name"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text Editor",
+   "label": "Address"
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "second_phone_number",
+   "fieldtype": "Data",
+   "label": "Second Phone Number"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "account_aplication",
+   "fieldtype": "Link",
+   "label": "Account Aplication",
+   "options": "User"
+  },
+  {
+   "fieldname": "package_taburi_tab",
+   "fieldtype": "Tab Break",
+   "label": "Package Taburi"
+  },
+  {
+   "fieldname": "saving_method",
+   "fieldtype": "Select",
+   "label": "Saving Method",
+   "options": "Pick Up\nTransfer"
+  },
+  {
+   "fieldname": "schedule_pick_up",
+   "fieldtype": "Select",
+   "label": "Schedule Pick Up",
+   "options": "By Request\nTentative\nEvery Day\n1 Week\n2 Week\n3 Week\n1 Month"
+  },
+  {
+   "fieldname": "saving_goals",
+   "fieldtype": "Data",
+   "label": "Saving Goals"
+  },
+  {
+   "fieldname": "time_period",
+   "fieldtype": "Select",
+   "label": "Time Period",
+   "options": "3 Month\n6 Month\n9 Month\n12 Month"
+  },
+  {
+   "fieldname": "advisor",
+   "fieldtype": "Link",
+   "label": "Advisor",
+   "options": "Advisor"
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Picture"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "join_date",
+   "fieldtype": "Date",
+   "label": "Join Date",
+   "reqd": 1
+  }
+ ],
+ "image_field": "picture",
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Transactions",
+   "link_doctype": "Transaction",
+   "link_fieldname": "customers"
+  }
+ ],
+ "modified": "2022-06-23 13:33:06.682104",
+ "modified_by": "Administrator",
+ "module": "Taburi",
+ "name": "Customers",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Testing"
+  }
+ ],
+ "title_field": "full_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

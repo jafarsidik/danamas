@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-04 20:03:24.232412",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "produk_dmiibbu_section",
+  "dmibbu_bunga",
+  "dmibbu_adm",
+  "dmibbu_provisi",
+  "dmibbu_asuransi",
+  "setting_produk_dmipria_section",
+  "dmipria_bunga",
+  "dmipria_adm",
+  "dmipria_provisi",
+  "dmipria_suransi",
+  "setting_produk_dmipacar_section",
+  "dmipacar_bunga",
+  "dmipacar_adm",
+  "dmipacar_provisi",
+  "dmipacar_asuransi"
+ ],
+ "fields": [
+  {
+   "fieldname": "produk_dmiibbu_section",
+   "fieldtype": "Column Break",
+   "label": "Setting Produk DMIBBU"
+  },
+  {
+   "fieldname": "dmibbu_bunga",
+   "fieldtype": "Percent",
+   "label": "Bunga",
+   "precision": "1"
+  },
+  {
+   "fieldname": "dmibbu_adm",
+   "fieldtype": "Percent",
+   "label": "POTONGAN ADM (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "dmibbu_provisi",
+   "fieldtype": "Percent",
+   "label": "POTONGAN PROVISI (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "dmibbu_asuransi",
+   "fieldtype": "Percent",
+   "label": "POTONGAN ASURANSI (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "setting_produk_dmipria_section",
+   "fieldtype": "Column Break",
+   "label": "Setting Produk DMIPRIA"
+  },
+  {
+   "fieldname": "dmipria_bunga",
+   "fieldtype": "Percent",
+   "label": "Bunga",
+   "precision": "1"
+  },
+  {
+   "fieldname": "dmipria_adm",
+   "fieldtype": "Percent",
+   "label": "POTONGAN ADM (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "dmipria_provisi",
+   "fieldtype": "Percent",
+   "label": "POTONGAN PROVISI (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "dmipria_suransi",
+   "fieldtype": "Percent",
+   "label": "POTONGAN ASURANSI (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "setting_produk_dmipacar_section",
+   "fieldtype": "Column Break",
+   "label": "Setting Produk DMIPACAR"
+  },
+  {
+   "fieldname": "dmipacar_bunga",
+   "fieldtype": "Percent",
+   "label": "Bunga",
+   "precision": "1"
+  },
+  {
+   "fieldname": "dmipacar_adm",
+   "fieldtype": "Percent",
+   "label": "POTONGAN ADM (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "dmipacar_provisi",
+   "fieldtype": "Percent",
+   "label": "POTONGAN PROVISI (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "dmipacar_asuransi",
+   "fieldtype": "Percent",
+   "label": "POTONGAN ASURANSI (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-07-04 23:13:54.842181",
+ "modified_by": "Administrator",
+ "module": "Danamas",
+ "name": "Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

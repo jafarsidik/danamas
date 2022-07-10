@@ -1,0 +1,42 @@
+{
+ "based_on": "",
+ "chart_name": "Saldo",
+ "chart_type": "Report",
+ "creation": "2022-06-21 02:47:29.948126",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2022-06-21 02:52:23.848290",
+ "modified_by": "Administrator",
+ "module": "Taburi",
+ "name": "Saldo",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "parent_document_type": "",
+ "report_name": "Customers Balance",
+ "source": "",
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Donut",
+ "use_report_chart": 0,
+ "value_based_on": "",
+ "x_field": "cif",
+ "y_axis": [
+  {
+   "y_field": "debit"
+  },
+  {
+   "y_field": "credit"
+  },
+  {
+   "y_field": "saldo"
+  }
+ ]
+}

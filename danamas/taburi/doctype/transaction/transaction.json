@@ -1,0 +1,181 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TRX-{#####}",
+ "creation": "2022-06-18 00:23:19.288402",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_date",
+  "full_name",
+  "saving_method",
+  "saving_goals",
+  "column_break_4",
+  "customers",
+  "ao_name",
+  "schedule_pickup",
+  "time_periode",
+  "ao",
+  "join_date",
+  "amount_section",
+  "debit",
+  "no_reff",
+  "column_break_10",
+  "credit",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Transaction Date",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "customers",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customers ID",
+   "options": "Customers",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "no_reff",
+   "fieldtype": "Data",
+   "label": "No Reff"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Select",
+   "label": "Notes",
+   "options": "Setoran Awal\nTop Up\nWithdraw",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customers.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Full Name"
+  },
+  {
+   "fetch_from": "customers.advisor",
+   "fieldname": "ao",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "AO",
+   "options": "Advisor"
+  },
+  {
+   "fetch_from": "ao.full_name",
+   "fieldname": "ao_name",
+   "fieldtype": "Read Only",
+   "label": "Advisor Name"
+  },
+  {
+   "fieldname": "amount_section",
+   "fieldtype": "Section Break",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customers.saving_method",
+   "fieldname": "saving_method",
+   "fieldtype": "Data",
+   "label": "Saving Method",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customers.schedule_pick_up",
+   "fieldname": "schedule_pickup",
+   "fieldtype": "Data",
+   "label": "Schedule Pickup",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customers.saving_goals",
+   "fieldname": "saving_goals",
+   "fieldtype": "Data",
+   "label": "Saving Goals",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customers.time_period",
+   "fieldname": "time_periode",
+   "fieldtype": "Data",
+   "label": "Time Periode",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customers.join_date",
+   "fieldname": "join_date",
+   "fieldtype": "Data",
+   "label": "Join Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "debit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Credit",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "fieldname": "credit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Debit",
+   "non_negative": 1,
+   "precision": "0"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-04 09:41:58.181889",
+ "modified_by": "Administrator",
+ "module": "Taburi",
+ "name": "Transaction",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "role": "Guest",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
