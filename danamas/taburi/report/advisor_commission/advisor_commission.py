@@ -9,15 +9,10 @@ from pypika.terms import Case
 def execute(filters=None):
 	message = ["Komisi 1% Untuk Advisor"]
 	columns = [{
-		"fieldname": "ao",
+		"fieldname": "advisor",
 		"label": "Advisor Code",
 		"fieldtype": "Link",
 		"options": "Advisor"
-	},
-	{
-		"fieldname": "ao_name",
-		"label": "Advisor Name",
-		"fieldtype": "Data"
 	},
 	{
 		"fieldname": "debit",
@@ -40,25 +35,25 @@ def execute(filters=None):
 	data = frappe.db.sql(
 		f"""
 		SELECT
-			ao_name,
-			ao,
-			month(transaction_date),
-			sum(debit) as debit,
-			sum(case when (month(transaction_date) ='01') then (debit*1/100) else 0 end) as januari,
-			sum(case when (month(transaction_date) ='02') then (debit*1/100) else 0 end) as februari,
-			sum(case when (month(transaction_date) ='03') then (debit*1/100) else 0 end) as maret,
-			sum(case when (month(transaction_date) ='04') then (debit*1/100) else 0 end) as april,
-			sum(case when (month(transaction_date) ='05') then (debit*1/100) else 0 end) as mei,
-			sum(case when (month(transaction_date) ='06') then (debit*1/100) else 0 end) as juni,
-			sum(case when (month(transaction_date) ='07') then (debit*1/100) else 0 end) as juli,
-			sum(case when (month(transaction_date) ='08') then (debit*1/100) else 0 end) as agustus,
-			sum(case when (month(transaction_date) ='09') then (debit*1/100) else 0 end) as september,
-			sum(case when (month(transaction_date) ='10') then (debit*1/100) else 0 end) as oktober,
-			sum(case when (month(transaction_date) ='11') then (debit*1/100) else 0 end) as november,
-			sum(case when (month(transaction_date) ='12') then (debit*1/100) else 0 end) as desember
-		FROM `tabTransaction`
+			c.advisor,
+			month(t.transaction_date),
+			sum(t.debit) as debit,
+			sum(case when (month(t.transaction_date) ='01') then (t.debit*1/100) else 0 end) as januari,
+			sum(case when (month(t.transaction_date) ='02') then (t.debit*1/100) else 0 end) as februari,
+			sum(case when (month(t.transaction_date) ='03') then (t.debit*1/100) else 0 end) as maret,
+			sum(case when (month(t.transaction_date) ='04') then (t.debit*1/100) else 0 end) as april,
+			sum(case when (month(t.transaction_date) ='05') then (t.debit*1/100) else 0 end) as mei,
+			sum(case when (month(t.transaction_date) ='06') then (t.debit*1/100) else 0 end) as juni,
+			sum(case when (month(t.transaction_date) ='07') then (t.debit*1/100) else 0 end) as juli,
+			sum(case when (month(t.transaction_date) ='08') then (t.debit*1/100) else 0 end) as agustus,
+			sum(case when (month(t.transaction_date) ='09') then (t.debit*1/100) else 0 end) as september,
+			sum(case when (month(t.transaction_date) ='10') then (t.debit*1/100) else 0 end) as oktober,
+			sum(case when (month(t.transaction_date) ='11') then (t.debit*1/100) else 0 end) as november,
+			sum(case when (month(t.transaction_date) ='12') then (t.debit*1/100) else 0 end) as desember
+		FROM `tabTransaction` AS t
+		left join `tabCustomers` as c on `c`.`name` = `t`.`customers`
 		where year(transaction_date) = year(curdate())
-		group by ao
+		group by c.advisor
 		""", as_dict=1)
 
 	return columns, data,message

@@ -119,10 +119,9 @@
    "read_only": 1
   }
  ],
- "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-10 21:40:27.914181",
+ "modified": "2022-07-11 13:23:46.703949",
  "modified_by": "Administrator",
  "module": "Taburi",
  "name": "EStatement",
@@ -141,6 +140,12 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest"
   }
  ],
  "sort_field": "modified",
