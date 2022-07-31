@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:kode",
+ "creation": "2022-07-29 10:26:08.578455",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "kode",
+  "nama",
+  "deskripsi",
+  "jenis_pinjaman",
+  "tenor",
+  "periode_angsuran",
+  "hold_cicilan",
+  "berapa_x_cicilan",
+  "multi_pinjaman",
+  "minimal_bayar_cicilan",
+  "column_break_8",
+  "plafon",
+  "administrasi",
+  "provisi",
+  "asuransi",
+  "bunga",
+  "jasa_"
+ ],
+ "fields": [
+  {
+   "fieldname": "kode",
+   "fieldtype": "Data",
+   "label": "Kode",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "nama",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama",
+   "reqd": 1
+  },
+  {
+   "fieldname": "deskripsi",
+   "fieldtype": "Small Text",
+   "label": "Deskripsi"
+  },
+  {
+   "fieldname": "jenis_pinjaman",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Jenis Pinjaman",
+   "options": "\nFlat\nMenurun\nAnuitas",
+   "reqd": 1
+  },
+  {
+   "fieldname": "periode_angsuran",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Periode Angsuran",
+   "options": "\nHarian\nMingguan Per 7 Hari\nMingguan Per 10 Hari\nBulanan",
+   "reqd": 1
+  },
+  {
+   "default": "Tidak",
+   "fieldname": "multi_pinjaman",
+   "fieldtype": "Select",
+   "label": "Multi Pinjaman",
+   "options": "\nYa\nTidak"
+  },
+  {
+   "default": "0",
+   "fieldname": "minimal_bayar_cicilan",
+   "fieldtype": "Data",
+   "label": "Minimal Bayar Cicilan"
+  },
+  {
+   "fieldname": "plafon",
+   "fieldtype": "Currency",
+   "label": "Plafon"
+  },
+  {
+   "fieldname": "administrasi",
+   "fieldtype": "Percent",
+   "label": "Administrasi"
+  },
+  {
+   "fieldname": "provisi",
+   "fieldtype": "Percent",
+   "label": "Provisi"
+  },
+  {
+   "fieldname": "bunga",
+   "fieldtype": "Percent",
+   "label": "Bunga Pinjaman"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "jasa_",
+   "fieldtype": "Percent",
+   "label": "Jasa"
+  },
+  {
+   "fieldname": "asuransi",
+   "fieldtype": "Percent",
+   "label": "Asuransi"
+  },
+  {
+   "fieldname": "tenor",
+   "fieldtype": "Select",
+   "label": "Tenor",
+   "options": "\nHarian\nMingguan\nBulanan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hold_cicilan",
+   "fieldtype": "Select",
+   "label": "Hold Cicilan",
+   "options": "\nYa\nTidak"
+  },
+  {
+   "fieldname": "berapa_x_cicilan",
+   "fieldtype": "Data",
+   "label": "Berapa x Cicilan"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-31 09:20:08.047058",
+ "modified_by": "Administrator",
+ "module": "Danamas",
+ "name": "Jenis Pinjaman",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

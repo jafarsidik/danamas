@@ -1,0 +1,387 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{nama_cabang}-LD-{nama_produk}-{#####}-{MM}-{YY}",
+ "creation": "2022-07-04 19:17:18.265663",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "form_aplikasi_tab",
+  "section_break_1",
+  "no_nasabah",
+  "nama_cabang",
+  "nama_kelompok",
+  "column_break_2",
+  "nama_sales",
+  "tujuan_pembiayaan",
+  "status",
+  "section_break_10",
+  "tanggal_pengajuan",
+  "nama_produk",
+  "tenor",
+  "plafon_pembiayaan",
+  "plafon_maximum",
+  "jenis_pembiayaan",
+  "tenor_produk",
+  "periode_angsuran",
+  "hold_cicilan",
+  "berapa_x_cicilan",
+  "fasilitas_pembiayaan_section",
+  "potongan_bunga",
+  "potongan_adm",
+  "potongan_provisi",
+  "potongan_asuransi",
+  "potongan_jasa",
+  "angsuran_section",
+  "column_break_30",
+  "total",
+  "biaya_transfer",
+  "column_break_32",
+  "total_after_hold",
+  "grand_total_",
+  "kewajiban_angsuran_column",
+  "total_angsuran_column",
+  "total_pokok",
+  "total_bunga",
+  "total_angsuran",
+  "angsuran_column",
+  "pokok_angsuran",
+  "bunga_angsuran",
+  "angsuran",
+  "data_angsuran_tab",
+  "section_break_41",
+  "list_angsuran_pinjaman",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "form_aplikasi_tab",
+   "fieldtype": "Tab Break",
+   "label": "Form Aplikasi"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "IDENTITAS"
+  },
+  {
+   "fieldname": "no_nasabah",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "No Nasabah",
+   "options": "Nasabah",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_cabang",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Nama Cabang",
+   "options": "\nJakarta\nBogor\nKarawang",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_kelompok",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Kelompok",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nama_sales",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Nama Sales",
+   "options": "Sales",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tujuan_pembiayaan",
+   "fieldtype": "Select",
+   "label": "Tujuan Pembiayaan",
+   "options": "\nUMKM\nKTA\nDT",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "FASILITAS PEMBIAYAAN"
+  },
+  {
+   "fieldname": "fasilitas_pembiayaan_section",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tanggal_pengajuan",
+   "fieldtype": "Date",
+   "label": "Tanggal Pengajuan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_produk",
+   "fieldtype": "Link",
+   "label": "Nama Produk",
+   "options": "Jenis Pinjaman",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plafon_pembiayaan",
+   "fieldtype": "Currency",
+   "label": "Plafon Pembiayaan",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "potongan_adm",
+   "fieldtype": "Percent",
+   "label": "Administrasi (%)",
+   "precision": "1"
+  },
+  {
+   "default": "0",
+   "fieldname": "potongan_provisi",
+   "fieldtype": "Percent",
+   "label": "Provisi (%)",
+   "precision": "1"
+  },
+  {
+   "default": "0",
+   "fieldname": "potongan_asuransi",
+   "fieldtype": "Percent",
+   "label": "Asuransi (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "non_negative": 1,
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "biaya_transfer",
+   "fieldtype": "Currency",
+   "label": "Biaya Transfer",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "fieldname": "grand_total_",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "non_negative": 1,
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "angsuran_section",
+   "fieldtype": "Section Break",
+   "label": "Total Penerimaan"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kewajiban_angsuran_column",
+   "fieldtype": "Section Break",
+   "label": "Total Biaya Angsuran"
+  },
+  {
+   "fieldname": "data_angsuran_tab",
+   "fieldtype": "Tab Break",
+   "label": "List Angsuran Pinjaman"
+  },
+  {
+   "fieldname": "tenor",
+   "fieldtype": "Data",
+   "label": "Tenor",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "nama_produk.jenis_pinjaman",
+   "fieldname": "jenis_pembiayaan",
+   "fieldtype": "Read Only",
+   "label": "Jenis Pembiayaan"
+  },
+  {
+   "fetch_from": "nama_produk.periode_angsuran",
+   "fieldname": "periode_angsuran",
+   "fieldtype": "Read Only",
+   "label": "Periode Angsuran"
+  },
+  {
+   "default": "0",
+   "fieldname": "potongan_jasa",
+   "fieldtype": "Percent",
+   "label": "Jasa (%)",
+   "precision": "1"
+  },
+  {
+   "default": "0",
+   "fieldname": "potongan_bunga",
+   "fieldtype": "Percent",
+   "label": "Bunga (%)",
+   "precision": "2"
+  },
+  {
+   "fetch_from": "nama_produk.plafon",
+   "fieldname": "plafon_maximum",
+   "fieldtype": "Currency",
+   "label": "Plafon Maximum",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Aplikasi",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "pokok_angsuran",
+   "fieldtype": "Currency",
+   "label": "Pokok Angsuran (Rp)",
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bunga_angsuran",
+   "fieldtype": "Currency",
+   "label": "Bunga Angsuran",
+   "non_negative": 1,
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "angsuran",
+   "fieldtype": "Currency",
+   "label": "Angsuran (Pokok + Bunga) (Rp)",
+   "non_negative": 1,
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "list_angsuran_pinjaman",
+   "fieldtype": "Table",
+   "no_copy": 1,
+   "options": "List Angsuran Pinjaman",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_41",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "nama_produk.tenor",
+   "fieldname": "tenor_produk",
+   "fieldtype": "Read Only",
+   "label": "Tenor"
+  },
+  {
+   "fieldname": "angsuran_column",
+   "fieldtype": "Column Break",
+   "label": "Angsuran"
+  },
+  {
+   "fieldname": "total_angsuran_column",
+   "fieldtype": "Column Break",
+   "label": "Total Angsuran"
+  },
+  {
+   "fieldname": "total_pokok",
+   "fieldtype": "Currency",
+   "label": "Total Pokok",
+   "non_negative": 1,
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_bunga",
+   "fieldtype": "Currency",
+   "label": "Total Bunga",
+   "non_negative": 1,
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_angsuran",
+   "fieldtype": "Currency",
+   "label": "Total Angsuran",
+   "non_negative": 1,
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "nama_produk.hold_cicilan",
+   "fieldname": "hold_cicilan",
+   "fieldtype": "Read Only",
+   "label": "Hold Cicilan"
+  },
+  {
+   "fetch_from": "nama_produk.berapa_x_cicilan",
+   "fieldname": "berapa_x_cicilan",
+   "fieldtype": "Read Only",
+   "label": "Berapa x Cicilan"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_after_hold",
+   "fieldtype": "Currency",
+   "label": "Total Setelah Hold",
+   "non_negative": 1,
+   "precision": "0",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-07-31 01:52:37.215887",
+ "modified_by": "Administrator",
+ "module": "Danamas",
+ "name": "Aplikasi",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
