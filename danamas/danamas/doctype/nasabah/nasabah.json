@@ -291,8 +291,19 @@
  ],
  "image_field": "picture",
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2022-07-04 19:32:34.417952",
+ "links": [
+  {
+   "group": "Pinjaman",
+   "link_doctype": "Aplikasi",
+   "link_fieldname": "no_nasabah"
+  },
+  {
+   "group": "Simpanan",
+   "link_doctype": "Simpanan Sementara",
+   "link_fieldname": "nasabah"
+  }
+ ],
+ "modified": "2022-08-03 13:31:26.081092",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Nasabah",

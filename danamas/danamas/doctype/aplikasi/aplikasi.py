@@ -4,7 +4,6 @@
 import json
 import math
 
-import frappe
 from frappe import _
 from frappe.utils import add_months, add_days,flt, get_last_day, getdate, now_datetime,add_to_date
 
@@ -70,7 +69,7 @@ class Aplikasi(Document):
 					)
 					next_date = add_single_week_7(payment_date)
 					payment_date = next_date
-					
+
 				if self.periode_angsuran == 'Harian':
 					self.append(
 						"list_angsuran_pinjaman",

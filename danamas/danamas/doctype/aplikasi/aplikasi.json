@@ -33,13 +33,16 @@
   "potongan_provisi",
   "potongan_asuransi",
   "potongan_jasa",
+  "dp_",
   "angsuran_section",
   "column_break_30",
   "total",
   "biaya_transfer",
+  "potongan_biaya_lain_lain",
   "column_break_32",
   "total_after_hold",
   "grand_total_",
+  "dp_rp",
   "kewajiban_angsuran_column",
   "total_angsuran_column",
   "total_pokok",
@@ -49,7 +52,6 @@
   "pokok_angsuran",
   "bunga_angsuran",
   "angsuran",
-  "data_angsuran_tab",
   "section_break_41",
   "list_angsuran_pinjaman",
   "amended_from"
@@ -203,11 +205,6 @@
    "label": "Total Biaya Angsuran"
   },
   {
-   "fieldname": "data_angsuran_tab",
-   "fieldtype": "Tab Break",
-   "label": "List Angsuran Pinjaman"
-  },
-  {
    "fieldname": "tenor",
    "fieldtype": "Data",
    "label": "Tenor",
@@ -287,7 +284,8 @@
   },
   {
    "fieldname": "section_break_41",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "List Angsuran Pinjaman"
   },
   {
    "fetch_from": "nama_produk.tenor",
@@ -352,12 +350,39 @@
    "non_negative": 1,
    "precision": "0",
    "read_only": 1
+  },
+  {
+   "fetch_from": "nama_produk.dp_",
+   "fieldname": "dp_",
+   "fieldtype": "Percent",
+   "label": "DP (%)",
+   "precision": "1"
+  },
+  {
+   "default": "0",
+   "fieldname": "potongan_biaya_lain_lain",
+   "fieldtype": "Currency",
+   "label": "Potongan Biaya Lain - Lain (Rp)",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "fieldname": "dp_rp",
+   "fieldtype": "Currency",
+   "label": "DP (Rp)",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2022-08-01 15:50:09.499819",
+ "links": [
+  {
+   "group": "Pembayaran Angsuran",
+   "link_doctype": "Pembayaran Angsuran",
+   "link_fieldname": "aplikasi_number"
+  }
+ ],
+ "modified": "2022-08-02 00:55:28.265560",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Aplikasi",

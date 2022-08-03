@@ -6,8 +6,8 @@ from frappe import _
 from frappe import publish_progress
 from frappe.utils import today,add_to_date
 from datetime import datetime # from python std library
-from frappe.utils import money_in_words
-from frappe.utils import validate_phone_number
+from frappe.utils import money_in_words, get_url,validate_phone_number
+
 from frappe.query_builder import DocType
 from frappe.query_builder.functions import Count
 from pypika.terms import Case
@@ -106,7 +106,7 @@ def sendText(phone_number,full_name,total_saldo):
 
 def sendAttachFile(docname,phone_number):
     url = "https://starsender.online/api/sendFiles"
-    url_file = "http://117.53.47.41/api/method/danamas.taburi.api.download_pdf?doctype=EStatement&name="+docname+"&format=E-State"
+    url_file = get_url()+"/api/method/danamas.taburi.api.download_pdf?doctype=EStatement&name="+docname+"&format=E-State"
     
     payload={
         'tujuan': phone_number,
@@ -132,12 +132,12 @@ def download_pdf(doctype, name, format=None, doc=None, no_letterhead=0):
 
 @frappe.whitelist(allow_guest=True)
 def testKirim():
-    url = "https://starsender.online/api/sendFiles"
-
+    url = "https://starsender.online/api/sendText"
+    urlfiles = get_url()+"/api/method/danamas.taburi.api.download_pdf?doctype=EStatement&name=TH-0011-0822-0022&format=E-State"
     payload={
         'tujuan': "087771859551",
-        'message': f"Halo *Bpk/Ibu Jafar,*\nTerimakasih telah menabung di *Danamas*. dan memilih Produk *TABURI* sebagai *Sarana anda untuk Meraih Masa Depan.* \n*Saat ini saldo anda* sudah *Terkumpul sejumlah Rp.* ( ,'IDR') )\n*TABUNGAN TANPA BIAYA ADMIN*\nUntuk Info lebih lanjut serta permintaan *Penyetoran/Penarikan*, silahkan hubungi nomor berikut :  0821-1071-2188 *SYAHRIL*\nTingkatkan terus jumlah saldo tabungan anda untuk mendapatkan return s/d 5% PA",
-        'file': "http://117.53.47.41/api/method/danamas.taburi.api.download_pdf?doctype=EStatement&name=TH-0232-0722-19274&format=E-State"
+        'message': f"Halo *Bpk/Ibu Jafar,*\nTerimakasih telah menabung di *Danamas*. dan memilih Produk *TABURI* sebagai *Sarana anda untuk Meraih Masa Depan.* \n*Saat ini saldo anda* sudah *Terkumpul sejumlah Rp.* ( ,'IDR') )\n*TABUNGAN TANPA BIAYA ADMIN*\nUntuk Info lebih lanjut serta permintaan *Penyetoran/Penarikan*, silahkan hubungi nomor berikut :  0821-1071-2188 *SYAHRIL*\nTingkatkan terus jumlah saldo tabungan anda untuk mendapatkan return s/d 5% PA \n dan silahkan download E-Statement nya Disini  "+urlfiles,
+        'file': urlfiles
     }
     files=[
 

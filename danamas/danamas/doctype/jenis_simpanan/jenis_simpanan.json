@@ -2,30 +2,31 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:kode",
- "creation": "2022-07-29 10:26:08.578455",
+ "creation": "2022-08-02 09:06:50.861728",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "section_break_1",
   "kode",
   "nama",
   "deskripsi",
-  "jenis_pinjaman",
-  "tenor",
-  "periode_angsuran",
-  "hold_cicilan",
-  "berapa_x_cicilan",
-  "multi_pinjaman",
-  "minimal_bayar_cicilan",
+  "masuk_hitungan_shu",
   "column_break_8",
   "plafon",
   "administrasi",
   "provisi",
   "asuransi",
   "bunga",
-  "jasa_",
-  "dp_",
-  "denda"
+  "denda",
+  "section_break_12",
+  "jenis_simpanan_column",
+  "bisa_multi_rekening",
+  "tabungan_rencana",
+  "setoran_column",
+  "tipe_setoran",
+  "penarikan_column",
+  "tipe_penarikan"
  ],
  "fields": [
   {
@@ -48,33 +49,8 @@
    "label": "Deskripsi"
   },
   {
-   "fieldname": "jenis_pinjaman",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Jenis Pinjaman",
-   "options": "\nFlat\nMenurun\nAnuitas",
-   "reqd": 1
-  },
-  {
-   "fieldname": "periode_angsuran",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Periode Angsuran",
-   "options": "\nHarian\nMingguan Per 7 Hari\nMingguan Per 10 Hari\nBulanan",
-   "reqd": 1
-  },
-  {
-   "default": "Tidak",
-   "fieldname": "multi_pinjaman",
-   "fieldtype": "Select",
-   "label": "Multi Pinjaman",
-   "options": "\nYa\nTidak"
-  },
-  {
-   "default": "0",
-   "fieldname": "minimal_bayar_cicilan",
-   "fieldtype": "Data",
-   "label": "Minimal Bayar Cicilan"
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "plafon",
@@ -92,46 +68,67 @@
    "label": "Provisi"
   },
   {
-   "fieldname": "bunga",
-   "fieldtype": "Percent",
-   "label": "Bunga Pinjaman"
-  },
-  {
-   "fieldname": "column_break_8",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "jasa_",
-   "fieldtype": "Percent",
-   "label": "Jasa"
-  },
-  {
    "fieldname": "asuransi",
    "fieldtype": "Percent",
    "label": "Asuransi"
   },
   {
-   "fieldname": "tenor",
-   "fieldtype": "Select",
-   "label": "Tenor",
-   "options": "\nHarian\nMingguan\nBulanan",
-   "reqd": 1
+   "fieldname": "bunga",
+   "fieldtype": "Percent",
+   "label": "Bunga Simpanan"
   },
   {
-   "fieldname": "hold_cicilan",
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "masuk_hitungan_shu",
    "fieldtype": "Select",
-   "label": "Hold Cicilan",
+   "label": "Masuk Hitungan SHU",
+   "options": "Ya\nTidak"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "jenis_simpanan_column",
+   "fieldtype": "Column Break",
+   "label": "Jenis Simpanan"
+  },
+  {
+   "fieldname": "bisa_multi_rekening",
+   "fieldtype": "Select",
+   "label": "Bisa Multi Rekening",
    "options": "\nYa\nTidak"
   },
   {
-   "fieldname": "berapa_x_cicilan",
-   "fieldtype": "Data",
-   "label": "Berapa x Cicilan"
+   "fieldname": "tabungan_rencana",
+   "fieldtype": "Select",
+   "label": "Tabungan Rencana",
+   "options": "\nYa\nTidak"
   },
   {
-   "fieldname": "dp_",
-   "fieldtype": "Percent",
-   "label": "DP"
+   "fieldname": "setoran_column",
+   "fieldtype": "Column Break",
+   "label": "Setoran"
+  },
+  {
+   "fieldname": "tipe_setoran",
+   "fieldtype": "Select",
+   "label": "Tipe Setoran",
+   "options": "\nSetor Kapan Saja\nDengan Tagihan"
+  },
+  {
+   "fieldname": "penarikan_column",
+   "fieldtype": "Column Break",
+   "label": "Penarikan"
+  },
+  {
+   "fieldname": "tipe_penarikan",
+   "fieldtype": "Select",
+   "label": "Tipe Penarikan",
+   "options": "\nBisa Ditarik Kapan Saja\nHanya Oleh Pengurus/Admin\nHanya Saat Penutupan Rekening"
   },
   {
    "fieldname": "denda",
@@ -141,10 +138,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-03 13:34:14.172734",
+ "modified": "2022-08-03 10:45:17.692772",
  "modified_by": "Administrator",
  "module": "Danamas",
- "name": "Jenis Pinjaman",
+ "name": "Jenis Simpanan",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

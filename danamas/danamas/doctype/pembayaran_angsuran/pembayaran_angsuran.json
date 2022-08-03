@@ -1,0 +1,183 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{aplikasi_number}-{##}",
+ "creation": "2022-08-02 00:04:08.985538",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "aplikasi_number",
+  "nasabah",
+  "angsuran_ke",
+  "pokok",
+  "bunga",
+  "angsuran",
+  "column_break_7",
+  "tanggal_pembayaran",
+  "penambahan_pembayaran_via_simpanan_sementara",
+  "saldo_simpanan",
+  "pembayaran",
+  "total_pembayaran",
+  "kelebihan_pembayaran",
+  "denda"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "aplikasi_number.no_nasabah",
+   "fieldname": "nasabah",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Nasabah",
+   "options": "Nasabah",
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "aplikasi_number",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Aplikasi",
+   "options": "Aplikasi",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "angsuran_ke",
+   "fieldtype": "Read Only",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Angsuran Ke",
+   "non_negative": 1,
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "aplikasi_number.pokok_angsuran",
+   "fieldname": "pokok",
+   "fieldtype": "Currency",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Pokok",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "aplikasi_number.bunga_angsuran",
+   "fieldname": "bunga",
+   "fieldtype": "Currency",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Bunga",
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "pembayaran",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Pembayaran"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "kelebihan_pembayaran",
+   "fieldtype": "Currency",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Kelebihan Pembayaran",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "tanggal_pembayaran",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tanggal"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "denda",
+   "fieldtype": "Currency",
+   "label": "Denda",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "aplikasi_number.angsuran",
+   "fieldname": "angsuran",
+   "fieldtype": "Currency",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Angsuran",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "saldo_simpanan",
+   "fieldtype": "Currency",
+   "label": "Saldo Simpanan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_pembayaran",
+   "fieldtype": "Currency",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Total Pembayaran",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "penambahan_pembayaran_via_simpanan_sementara",
+   "fieldtype": "Check",
+   "label": "Penambahan Pembayaran Via Simpanan Sementara"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-03 14:29:02.800624",
+ "modified_by": "Administrator",
+ "module": "Danamas",
+ "name": "Pembayaran Angsuran",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
