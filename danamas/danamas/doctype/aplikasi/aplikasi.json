@@ -7,7 +7,6 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "form_aplikasi_tab",
   "section_break_1",
   "no_nasabah",
   "nama_cabang",
@@ -57,11 +56,6 @@
   "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "form_aplikasi_tab",
-   "fieldtype": "Tab Break",
-   "label": "Form Aplikasi"
-  },
   {
    "fieldname": "section_break_1",
    "fieldtype": "Section Break",
@@ -382,7 +376,7 @@
    "link_fieldname": "aplikasi_number"
   }
  ],
- "modified": "2022-08-02 00:55:28.265560",
+ "modified": "2022-08-04 05:46:03.172462",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Aplikasi",
