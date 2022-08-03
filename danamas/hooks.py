@@ -9,7 +9,13 @@ app_license = "MIT"
 
 # Includes in <head>
 # ------------------
-
+fixtures = [{
+	"doctype": "Workflow",
+		"filters": {
+			"name": [ "in", ["Pengajuan Pinjaman Nasabah"] ]
+			}
+		},
+	]
 # include js, css files in header of desk.html
 # app_include_css = "/assets/danamas/css/danamas.css"
 # app_include_js = "/assets/danamas/js/danamas.js"

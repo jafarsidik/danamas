@@ -10,14 +10,15 @@
   "aplikasi_number",
   "nasabah",
   "angsuran_ke",
+  "tanggal_tempo",
   "pokok",
   "bunga",
   "angsuran",
   "column_break_7",
   "tanggal_pembayaran",
+  "pembayaran",
   "penambahan_pembayaran_via_simpanan_sementara",
   "saldo_simpanan",
-  "pembayaran",
   "total_pembayaran",
   "kelebihan_pembayaran",
   "denda"
@@ -105,7 +106,8 @@
    "in_filter": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Tanggal"
+   "label": "Tanggal",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_7",
@@ -143,6 +145,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Total Pembayaran",
+   "non_negative": 1,
    "read_only": 1
   },
   {
@@ -150,11 +153,17 @@
    "fieldname": "penambahan_pembayaran_via_simpanan_sementara",
    "fieldtype": "Check",
    "label": "Penambahan Pembayaran Via Simpanan Sementara"
+  },
+  {
+   "fieldname": "tanggal_tempo",
+   "fieldtype": "Date",
+   "label": "Tanggal Tempo",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-03 14:29:02.800624",
+ "modified": "2022-08-04 04:01:53.420543",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Pembayaran Angsuran",

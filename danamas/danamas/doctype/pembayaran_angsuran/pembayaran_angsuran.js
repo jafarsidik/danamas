@@ -7,11 +7,26 @@ frappe.ui.form.on('Pembayaran Angsuran', {
 			frappe.db.count('Pembayaran Angsuran', {'aplikasi_number': frm.doc.aplikasi_number}).then(count => {
 				let angsuran = count+1;
 				frm.set_value('angsuran_ke', angsuran);
+				frappe.call('danamas.danamas.doctype.pembayaran_angsuran.pembayaran_angsuran.tanggalcicilan', {
+					aplikasi: frm.doc.aplikasi_number+"|"+angsuran
+				}).then(r => {
+					
+					frm.set_value('tanggal_tempo', r.message.tanggal_tagihan);
+					frm.set_value('tanggal_pembayaran',frappe.datetime.nowdate());
+					let time_diff_in_days = moment(frm.doc.tanggal_pembayaran).diff(frm.doc.tanggal_tempo, 'days');
+					if(time_diff_in_days > 0){
+						let denda = (frm.doc.angsuran*1)/100;
+						frm.set_value('denda', denda);
+					}
+					
+				});
 			});
+			
+			
 		}
 	},
 	pembayaran:function(frm){
-	
+		
 		frm.set_value('total_pembayaran', frm.doc.pembayaran);
 		let kembalian = frm.doc.total_pembayaran - frm.doc.angsuran;
 		frm.set_value('kelebihan_pembayaran', kembalian);
@@ -19,15 +34,26 @@ frappe.ui.form.on('Pembayaran Angsuran', {
 	penambahan_pembayaran_via_simpanan_sementara:function(frm){
 		if(frm.doc.penambahan_pembayaran_via_simpanan_sementara == 1){
 			
-			frappe.db.get_doc('Simpanan Sementara', null, {nasabah: frm.doc.nasabah}).then(res => {
-				let val = res.nominal_rp;
-				console.log(res)
-				let total_pembayaran = frm.doc.pembayaran;
-				frm.set_value('total_pembayaran', total_pembayaran);
-			});
 			
+			frappe.call('danamas.danamas.doctype.pembayaran_angsuran.pembayaran_angsuran.getsaldonasabahsimpanansementara', {
+				nasabah: frm.doc.nasabah
+			}).then(r => {
+				let saldo = r.message
+				let total_pembayaran = saldo+frm.doc.pembayaran;
+				frm.set_value('saldo_simpanan', saldo);
+				frm.set_value('total_pembayaran', total_pembayaran);
+				let kembalian = frm.doc.total_pembayaran - frm.doc.angsuran;
+				frm.set_value('kelebihan_pembayaran', kembalian);
+			})
 		}else{
 			frm.refresh_field('total_pembayaran');
+			frm.refresh_field('saldo_simpanan');
+			frm.refresh_field('kelebihan_pembayaran');
+			let total = frm.doc.total_pembayaran - frm.doc.saldo_simpanan;
+			frm.set_value('total_pembayaran', total);
+			frm.set_value('saldo_simpanan',0);
+			let kembalian = frm.doc.total_pembayaran - frm.doc.angsuran;
+			frm.set_value('kelebihan_pembayaran', kembalian);
 		}
 	}
 });
