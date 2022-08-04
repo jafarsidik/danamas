@@ -15,7 +15,8 @@ class PembayaranAngsuran(Document):
 			doc.aplikasi =  self.aplikasi_number
 			doc.debit_kredit = 'D'
 			doc.insert()
-		if(self.saldo_simpanan > 0 ):
+		#if(self.saldo_simpanan > 0 ):
+		if self.saldo_simpanan is not None:
 			doc = frappe.new_doc('Simpanan Sementara')
 			doc.nasabah = self.nasabah
 			doc.tanggal = self.tanggal_pembayaran
