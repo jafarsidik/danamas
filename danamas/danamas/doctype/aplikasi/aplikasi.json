@@ -371,12 +371,17 @@
  "is_submittable": 1,
  "links": [
   {
+   "group": "Pencairan Pinjaman",
+   "link_doctype": "Pencairan Pinjaman",
+   "link_fieldname": "aplikasi"
+  },
+  {
    "group": "Pembayaran Angsuran",
    "link_doctype": "Pembayaran Angsuran",
    "link_fieldname": "aplikasi_number"
   }
  ],
- "modified": "2022-08-04 05:46:03.172462",
+ "modified": "2022-08-04 15:18:38.404114",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Aplikasi",

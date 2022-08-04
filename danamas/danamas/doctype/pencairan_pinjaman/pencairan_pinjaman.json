@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-08-04 15:06:21.206282",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "aplikasi",
+  "nasabah",
+  "tanggal_pencairan",
+  "nominal",
+  "informasi_rekening_column",
+  "bank",
+  "nama_rekening",
+  "no_rekening"
+ ],
+ "fields": [
+  {
+   "fieldname": "aplikasi",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Aplikasi",
+   "options": "Aplikasi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tanggal_pencairan",
+   "fieldtype": "Date",
+   "label": "Tanggal Pencairan"
+  },
+  {
+   "fetch_from": "aplikasi.total_angsuran",
+   "fieldname": "nominal",
+   "fieldtype": "Currency",
+   "label": "Nominal"
+  },
+  {
+   "fieldname": "informasi_rekening_column",
+   "fieldtype": "Column Break",
+   "label": "Informasi Rekening"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Data",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "nama_rekening",
+   "fieldtype": "Data",
+   "label": "Nama Rekening"
+  },
+  {
+   "fieldname": "no_rekening",
+   "fieldtype": "Data",
+   "label": "No Rekening"
+  },
+  {
+   "fetch_from": "aplikasi.no_nasabah",
+   "fieldname": "nasabah",
+   "fieldtype": "Data",
+   "label": "Nasabah"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-04 15:15:49.987617",
+ "modified_by": "Administrator",
+ "module": "Danamas",
+ "name": "Pencairan Pinjaman",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
