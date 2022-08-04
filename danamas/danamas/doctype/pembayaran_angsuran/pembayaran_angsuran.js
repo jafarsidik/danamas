@@ -13,17 +13,27 @@ frappe.ui.form.on('Pembayaran Angsuran', {
 					
 					frm.set_value('tanggal_tempo', r.message.tanggal_tagihan);
 					frm.set_value('tanggal_pembayaran',frappe.datetime.nowdate());
-					let time_diff_in_days = moment(frm.doc.tanggal_pembayaran).diff(frm.doc.tanggal_tempo, 'days');
-					if(time_diff_in_days > 0){
-						let denda = (frm.doc.angsuran*1)/100;
-						frm.set_value('denda', denda);
-					}
+					// let time_diff_in_days = moment(frm.doc.tanggal_pembayaran).diff(frm.doc.tanggal_tempo, 'days');
+					// if(time_diff_in_days > 0){
+					// 	let denda = (frm.doc.angsuran*1)/100;
+					// 	frm.set_value('denda', denda);
+					// }
 					
 				});
 			});
 			
 			
 		}
+	},
+	tanggal_pembayaran:function(frm){
+		let time_diff_in_days = moment(frm.doc.tanggal_pembayaran).diff(frm.doc.tanggal_tempo, 'days');
+			if(time_diff_in_days > 0){
+				let denda = (frm.doc.angsuran*1)/100;
+				frm.set_value('denda', denda);
+			}else{
+				let denda = 0;
+				frm.set_value('denda', denda);
+			}
 	},
 	pembayaran:function(frm){
 		
