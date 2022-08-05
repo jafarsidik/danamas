@@ -26,7 +26,6 @@ class Aplikasi(Document):
 				pokok_angsuran = self.pokok_angsuran
 				bunga_angsuran = self.bunga_angsuran
 				angsuran = self.angsuran
-
 				plafon = flt(plafon - angsuran)
 				if plafon < 0:
 					plafon = 0.0
