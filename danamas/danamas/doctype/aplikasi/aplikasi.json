@@ -1,7 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
- "autoname": "format:{nama_cabang}-LD-{nama_produk}-{#####}-{MM}-{YY}",
+ "autoname": "format:{nama_produk}{#####}-{nama_nasbah}",
  "creation": "2022-07-04 19:17:18.265663",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -9,6 +8,7 @@
  "field_order": [
   "section_break_1",
   "no_nasabah",
+  "nama_nasbah",
   "nama_cabang",
   "nama_kelompok",
   "column_break_2",
@@ -17,6 +17,7 @@
   "status",
   "section_break_10",
   "tanggal_pengajuan",
+  "tanggal_pencairan",
   "nama_produk",
   "tenor",
   "plafon_pembiayaan",
@@ -33,6 +34,7 @@
   "potongan_asuransi",
   "potongan_jasa",
   "dp_",
+  "is_transfer",
   "angsuran_section",
   "column_break_30",
   "total",
@@ -102,7 +104,7 @@
    "fieldname": "tujuan_pembiayaan",
    "fieldtype": "Select",
    "label": "Tujuan Pembiayaan",
-   "options": "\nUMKM\nKTA\nDT",
+   "options": "\nUMKM\nKTA\nDT\nLain - Lain",
    "reqd": 1
   },
   {
@@ -123,7 +125,7 @@
   {
    "fieldname": "tanggal_pengajuan",
    "fieldtype": "Date",
-   "label": "Tanggal Pencairan",
+   "label": "Tanggal Pengajuan Aplikasi",
    "reqd": 1
   },
   {
@@ -270,6 +272,7 @@
    "read_only": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "list_angsuran_pinjaman",
    "fieldtype": "Table",
    "no_copy": 1,
@@ -365,6 +368,31 @@
    "fieldtype": "Currency",
    "label": "DP (Rp)",
    "read_only": 1
+  },
+  {
+   "fetch_from": "no_nasabah.nama_lengkap",
+   "fieldname": "nama_nasbah",
+   "fieldtype": "Read Only",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Nama Nasbah"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "No",
+   "fieldname": "is_transfer",
+   "fieldtype": "Select",
+   "label": "Is Transfer",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tanggal_pencairan",
+   "fieldtype": "Date",
+   "label": "Tanggal Pencairan",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -381,7 +409,7 @@
    "link_fieldname": "aplikasi_number"
   }
  ],
- "modified": "2022-08-04 15:37:11.749052",
+ "modified": "2022-08-05 08:24:43.324798",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Aplikasi",

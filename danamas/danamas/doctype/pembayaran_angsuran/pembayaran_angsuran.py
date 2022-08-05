@@ -51,3 +51,15 @@ def tanggalcicilan(aplikasi):
 				where a.name = "{ex[0]}" and ap.idx = "{ex[1]}"
             """,as_dict=True)
 	return datas[0]
+
+@frappe.whitelist()		
+def angsuranke(aplikasi):
+	
+	datas = frappe.db.sql(
+            f"""
+			select
+				count(*) as angsuran_ke
+				from `tabPembayaran Angsuran` a
+				where aplikasi_number='{aplikasi}'
+            """,as_dict=True)
+	return datas[0].angsuran_ke

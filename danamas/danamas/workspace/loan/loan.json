@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Loan</span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Aplikasi\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}}]",
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Loan</span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Aplikasi\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}}]",
  "creation": "2022-07-29 10:09:09.845913",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -42,7 +42,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Aplikasi",
-   "link_count": 1,
+   "link_count": 3,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -51,13 +51,33 @@
    "is_query_report": 0,
    "label": "Aplikasi",
    "link_count": 0,
-   "link_to": "Aplikasi Kredit",
+   "link_to": "Aplikasi",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pencairan",
+   "link_count": 0,
+   "link_to": "Pencairan Pinjaman",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pembayaran Angsuran",
+   "link_count": 0,
+   "link_to": "Pembayaran Angsuran",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2022-07-29 11:26:25.673115",
+ "modified": "2022-08-05 07:00:09.745910",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Loan",

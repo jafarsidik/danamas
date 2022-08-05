@@ -10,12 +10,14 @@ from frappe.utils import add_months, add_days,flt, get_last_day, getdate, now_da
 from frappe.model.document import Document
 
 class Aplikasi(Document):
-	def validate(self):
-		self.make_repayment_schedule()
+
+	#def on_update_after_submit(self):
+	#	if self.is_transfer == 'Yes':
+	#		self.make_repayment_schedule()
 
 	def make_repayment_schedule(self):
 		self.list_angsuran_pinjaman = []
-		payment_date = self.tanggal_pengajuan
+		payment_date = self.tanggal_pencairan
 		plafon = self.plafon_pembiayaan
 		if self.jenis_pembiayaan == 'Flat':
 			i = 0

@@ -2,17 +2,19 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Pembayaran Angsuran', {
-	refresh: function(frm) {
+	
+	aplikasi_number:function(frm){
 		if(frm.is_new()){
-			frappe.db.count('Pembayaran Angsuran', {'aplikasi_number': frm.doc.aplikasi_number}).then(count => {
-				let angsuran = count+1;
-				frm.set_value('angsuran_ke', angsuran);
+			
+			frappe.call('danamas.danamas.doctype.pembayaran_angsuran.pembayaran_angsuran.angsuranke', {aplikasi: frm.doc.aplikasi_number}).then(res => {
+				let angsuran_ke = res.message+1;
 				frappe.call('danamas.danamas.doctype.pembayaran_angsuran.pembayaran_angsuran.tanggalcicilan', {
-					aplikasi: frm.doc.aplikasi_number+"|"+angsuran
+					aplikasi: frm.doc.aplikasi_number+"|"+angsuran_ke
 				}).then(r => {
 					
 					frm.set_value('tanggal_tempo', r.message.tanggal_tagihan);
 					frm.set_value('tanggal_pembayaran',frappe.datetime.nowdate());
+					frm.set_value('angsuran_ke', angsuran_ke);
 					// let time_diff_in_days = moment(frm.doc.tanggal_pembayaran).diff(frm.doc.tanggal_tempo, 'days');
 					// if(time_diff_in_days > 0){
 					// 	let denda = (frm.doc.angsuran*1)/100;
@@ -21,7 +23,6 @@ frappe.ui.form.on('Pembayaran Angsuran', {
 					
 				});
 			});
-			
 			
 		}
 	},

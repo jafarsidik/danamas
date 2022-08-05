@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "format:{aplikasi}{###}",
  "creation": "2022-08-04 15:06:21.206282",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -8,12 +8,14 @@
  "field_order": [
   "aplikasi",
   "nasabah",
+  "nama",
   "tanggal_pencairan",
   "nominal",
   "informasi_rekening_column",
   "bank",
   "nama_rekening",
-  "no_rekening"
+  "no_rekening",
+  "amended_from"
  ],
  "fields": [
   {
@@ -22,7 +24,8 @@
    "in_list_view": 1,
    "label": "Aplikasi",
    "options": "Aplikasi",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "tanggal_pencairan",
@@ -33,7 +36,8 @@
    "fetch_from": "aplikasi.total_angsuran",
    "fieldname": "nominal",
    "fieldtype": "Currency",
-   "label": "Nominal"
+   "label": "Nominal",
+   "read_only": 1
   },
   {
    "fieldname": "informasi_rekening_column",
@@ -58,16 +62,34 @@
   {
    "fetch_from": "aplikasi.no_nasabah",
    "fieldname": "nasabah",
-   "fieldtype": "Data",
-   "label": "Nasabah"
+   "fieldtype": "Link",
+   "label": "Nasabah",
+   "options": "Nasabah"
+  },
+  {
+   "fetch_from": "nasabah.nama_lengkap",
+   "fieldname": "nama",
+   "fieldtype": "Read Only",
+   "label": "Nama"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Pencairan Pinjaman",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2022-08-04 15:15:49.987617",
+ "modified": "2022-08-05 08:09:57.888247",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Pencairan Pinjaman",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

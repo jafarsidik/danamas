@@ -9,6 +9,7 @@
  "field_order": [
   "aplikasi_number",
   "nasabah",
+  "nama_nasabah",
   "angsuran_ke",
   "tanggal_tempo",
   "pokok",
@@ -45,16 +46,12 @@
    "in_standard_filter": 1,
    "label": "Aplikasi",
    "options": "Aplikasi",
-   "read_only": 1,
    "reqd": 1
   },
   {
    "allow_in_quick_entry": 1,
    "fieldname": "angsuran_ke",
    "fieldtype": "Read Only",
-   "in_filter": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Angsuran Ke",
    "non_negative": 1,
    "precision": "0",
@@ -65,8 +62,6 @@
    "fetch_from": "aplikasi_number.pokok_angsuran",
    "fieldname": "pokok",
    "fieldtype": "Currency",
-   "in_filter": 1,
-   "in_list_view": 1,
    "label": "Pokok",
    "non_negative": 1,
    "read_only": 1
@@ -76,9 +71,6 @@
    "fetch_from": "aplikasi_number.bunga_angsuran",
    "fieldname": "bunga",
    "fieldtype": "Currency",
-   "in_filter": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Bunga",
    "read_only": 1
   },
@@ -93,9 +85,6 @@
    "allow_in_quick_entry": 1,
    "fieldname": "kelebihan_pembayaran",
    "fieldtype": "Currency",
-   "in_filter": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Kelebihan Pembayaran",
    "non_negative": 1,
    "read_only": 1
@@ -124,9 +113,6 @@
    "fetch_from": "aplikasi_number.angsuran",
    "fieldname": "angsuran",
    "fieldtype": "Currency",
-   "in_filter": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Angsuran",
    "non_negative": 1,
    "read_only": 1
@@ -140,9 +126,6 @@
   {
    "fieldname": "total_pembayaran",
    "fieldtype": "Currency",
-   "in_filter": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Total Pembayaran",
    "non_negative": 1,
    "read_only": 1
@@ -158,11 +141,17 @@
    "fieldtype": "Date",
    "label": "Tanggal Tempo",
    "read_only": 1
+  },
+  {
+   "fetch_from": "nasabah.nama_lengkap",
+   "fieldname": "nama_nasabah",
+   "fieldtype": "Read Only",
+   "label": "Nama Nasabah"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-04 15:16:55.301339",
+ "modified": "2022-08-05 07:32:29.146086",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Pembayaran Angsuran",
