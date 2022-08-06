@@ -43,7 +43,33 @@ class Aplikasi(Document):
 					)
 					next_payment_date = add_single_month(payment_date)
 					payment_date = next_payment_date
-				
+					
+				if self.periode_angsuran == 'Mingguan Per 24 Hari':
+					self.append(
+						"list_angsuran_pinjaman",
+						{
+							"tanggal_tagihan": add_single_week_24(payment_date),
+							"pokok": pokok_angsuran,
+							"bunga": bunga_angsuran,
+							"angsuran": angsuran,
+							"saldo_sisa": plafon,
+						},
+					)
+					next_date = add_single_week_24(payment_date)
+					payment_date = next_date
+				if self.periode_angsuran == 'Mingguan Per 14 Hari':
+					self.append(
+						"list_angsuran_pinjaman",
+						{
+							"tanggal_tagihan": add_single_week_14(payment_date),
+							"pokok": pokok_angsuran,
+							"bunga": bunga_angsuran,
+							"angsuran": angsuran,
+							"saldo_sisa": plafon,
+						},
+					)
+					next_date = add_single_week_14(payment_date)
+					payment_date = next_date
 				if self.periode_angsuran == 'Mingguan Per 10 Hari':
 					self.append(
 						"list_angsuran_pinjaman",
@@ -91,6 +117,18 @@ def add_single_month(date):
 		return get_last_day(add_months(date, 1))
 	else:
 		return add_months(date, 1)
+
+def add_single_week_24(date):
+	if getdate(date) == get_last_day(date):
+		return add_days(date, 24)
+	else:
+		return add_days(date, 24)
+
+def add_single_week_14(date):
+	if getdate(date) == get_last_day(date):
+		return add_days(date, 14)
+	else:
+		return add_days(date, 14)
 
 def add_single_week_10(date):
 	if getdate(date) == get_last_day(date):

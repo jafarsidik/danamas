@@ -59,7 +59,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Periode Angsuran",
-   "options": "\nHarian\nMingguan Per 7 Hari\nMingguan Per 10 Hari\nBulanan",
+   "options": "\nHarian\nMingguan Per 7 Hari\nMingguan Per 10 Hari\nMingguan Per 14 Hari\nMingguan Per 24 Hari\nBulanan",
    "reqd": 1
   },
   {
@@ -135,7 +135,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-04 04:27:45.525697",
+ "modified": "2022-08-06 10:12:08.391404",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Jenis Pinjaman",
