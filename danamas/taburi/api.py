@@ -80,15 +80,8 @@ def createEstatement():
             """,as_dict=True)
         doc.total_saldo = data_total[0].grand_total
         doc.insert()
-        #pengiriman Wa No Production 
-        # sendText(rows.phone_number,rows.full_name,data_total[0].grand_total)
-        # sendAttachFile(doc.name,rows.phone_number)
-
-        sendText(doc.name,"087771859551",rows.full_name,data_total[0].grand_total)
-        # #sendAttachFile(doc.name,"082213137001")
-        # updatedoc = frappe.get_doc('EStatement',doc.name)
-        # updatedoc.status_pengriman = 'Sudah Dikirim'
-        # updatedoc.save( ignore_permissions=True )
+        sendText(doc.name,rows.phone_number,rows.full_name,data_total[0].grand_total)
+       
     #return list_data
     #return get_transaksi
 
