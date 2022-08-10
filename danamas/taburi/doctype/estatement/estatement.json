@@ -14,7 +14,6 @@
   "periode_laporan",
   "start_date",
   "end_date",
-  "status_pengriman",
   "section_break_8",
   "detail_transaksi",
   "resume_section",
@@ -99,14 +98,6 @@
    "read_only": 1
   },
   {
-   "default": "Belum Dikirim",
-   "fieldname": "status_pengriman",
-   "fieldtype": "Select",
-   "label": "Status Pengriman",
-   "options": "Belum Dikirim\nSudah Dikirim",
-   "read_only": 1
-  },
-  {
    "fieldname": "saldo_transaksi",
    "fieldtype": "Currency",
    "label": "Saldo Transaksi",
@@ -121,7 +112,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-11 13:23:46.703949",
+ "modified": "2022-08-11 03:30:05.535963",
  "modified_by": "Administrator",
  "module": "Taburi",
  "name": "EStatement",
