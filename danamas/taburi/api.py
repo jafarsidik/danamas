@@ -21,8 +21,8 @@ from frappe.model.document import Document
 def createEstatement():
     list_data = []
     #before_30_days = add_to_date(today(), days=-30, as_string=True)
-    start_date = add_to_date(today(), days=-32, as_string=True)
-    end_date = add_to_date(today(), days=-2, as_string=True)
+    start_date = add_to_date(today(), days=-30, as_string=True)
+    end_date = add_to_date(today(), days=-1, as_string=True)
 
     get_nasabah = frappe.db.get_list('Customers',
         fields=['name', 'full_name','phone_number'],

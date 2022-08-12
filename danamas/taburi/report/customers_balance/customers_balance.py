@@ -59,26 +59,28 @@ def execute(filters=None):
 	data = frappe.db.sql(
 		f"""
 		SELECT 
-			customers,
-			full_name,
-			ao_name,
-			join_date,
-			sum(debit) as debit,
-			sum(credit) as credit,
-			sum(debit - credit) as saldo,
-			sum(case when (month(join_date+interval 3 month) and time_periode = "3 Month") then (debit*0.5/100) else 0 end) as 3_month,
-			sum(case when (month(join_date+interval 6 month) and time_periode = "6 Month") then (debit*1/100) else 0 end) as 6_month,
-			sum(case when (month(join_date+interval 9 month) and time_periode = "9 Month") then (debit*1.5/100) else 0 end) as 9_month,
-			sum(case when (month(join_date+interval 12 month)and time_periode = "12 Month") then (debit*2/100) else 0 end) as 12_month,
+			c.name as customers,
+			c.full_name,
+			ad.full_name as ao_name,
+			c.join_date,
+			sum(t.debit) as debit,
+			sum(t.credit) as credit,
+			sum(t.debit - t.credit) as saldo,
+			sum(case when (month(t.join_date+interval 3 month) and t.time_periode = "3 Month") then (t.debit*0.5/100) else 0 end) as 3_month,
+			sum(case when (month(t.join_date+interval 6 month) and t.time_periode = "6 Month") then (t.debit*1/100) else 0 end) as 6_month,
+			sum(case when (month(t.join_date+interval 9 month) and t.time_periode = "9 Month") then (t.debit*1.5/100) else 0 end) as 9_month,
+			sum(case when (month(t.join_date+interval 12 month)and t.time_periode = "12 Month") then (t.debit*2/100) else 0 end) as 12_month,
 			sum(
 				case 
-				when (month(join_date+interval 3 month) and time_periode = "3 Month") then (debit*0.5/100)+(debit - credit)
-				when (month(join_date+interval 6 month) and time_periode = "6 Month") then (debit*1/100)+(debit - credit)
-				when (month(join_date+interval 9 month) and time_periode = "9 Month") then (debit*1.5/100)+(debit - credit)
-				when (month(join_date+interval 12 month)and time_periode = "12 Month") then (debit*2/100)+(debit - credit)
+				when (month(t.join_date+interval 3 month) and t.time_periode = "3 Month") then (t.debit*0.5/100)+(t.debit - t.credit)
+				when (month(t.join_date+interval 6 month) and t.time_periode = "6 Month") then (t.debit*1/100)+(t.debit - t.credit)
+				when (month(t.join_date+interval 9 month) and t.time_periode = "9 Month") then (t.debit*1.5/100)+(t.debit - t.credit)
+				when (month(t.join_date+interval 12 month)and t.time_periode = "12 Month") then (t.debit*2/100)+(t.debit - t.credit)
 				else 0 end
 			) as grand_total
-			FROM tabTransaction
-			group by customers
+			FROM tabTransaction t
+			left join tabCustomers c on c.name= t.customers
+			left join tabAdvisor ad on c.advisor = ad.name
+			group by c.name
 		""", as_dict=1)
 	return columns, data
