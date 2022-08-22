@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{investasi}.{YY}{MM}{####}",
+ "creation": "2022-08-23 01:15:41.340700",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "transaksi_deposito",
+  "investasi",
+  "column_break_3",
+  "tanggal_transaksi",
+  "section_break_4",
+  "nama_nasabah",
+  "marketing",
+  "jumlah",
+  "column_break_10",
+  "tanggal_daftar",
+  "jangka_waktu",
+  "jumlah_deposito",
+  "saldo_deposito",
+  "saldo_bunga_deposito",
+  "section_break_15",
+  "keterangan"
+ ],
+ "fields": [
+  {
+   "fieldname": "transaksi_deposito",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transaksi",
+   "options": "Setoran Dana\nPenarikan Dana",
+   "reqd": 1
+  },
+  {
+   "fieldname": "investasi",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "No Investasi",
+   "options": "Investasi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "investasi.nasabah",
+   "fieldname": "nama_nasabah",
+   "fieldtype": "Link",
+   "label": "Nama Nasabah",
+   "options": "Nasabah",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "investasi.marketing",
+   "fieldname": "marketing",
+   "fieldtype": "Link",
+   "label": "Marketing",
+   "options": "Advisor",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "investasi.tanggal_pendaftaran",
+   "fieldname": "tanggal_daftar",
+   "fieldtype": "Datetime",
+   "label": "Tanggal Daftar",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "investasi.jangka_waktu",
+   "fieldname": "jangka_waktu",
+   "fieldtype": "Int",
+   "label": "Jangka Waktu",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "investasi.nilai_investasi",
+   "fieldname": "jumlah_deposito",
+   "fieldtype": "Currency",
+   "label": "Jumlah Deposito",
+   "read_only": 1
+  },
+  {
+   "fieldname": "saldo_deposito",
+   "fieldtype": "Currency",
+   "label": "Saldo Deposito",
+   "read_only": 1
+  },
+  {
+   "fieldname": "saldo_bunga_deposito",
+   "fieldtype": "Currency",
+   "label": "Saldo Bunga Deposito",
+   "read_only": 1
+  },
+  {
+   "fieldname": "jumlah",
+   "fieldtype": "Currency",
+   "label": "Jumlah"
+  },
+  {
+   "fieldname": "keterangan",
+   "fieldtype": "Small Text",
+   "label": "Keterangan"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tanggal_transaksi",
+   "fieldtype": "Datetime",
+   "label": "Tanggal Transaksi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-23 01:29:01.662457",
+ "modified_by": "Administrator",
+ "module": "Danamas",
+ "name": "Transaksi Investasi",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
