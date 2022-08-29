@@ -13,19 +13,24 @@
   "tanggal_lahir",
   "nama_ibu_kandung",
   "status_perkawinan",
-  "email",
-  "no_telepon",
-  "no_hp_1",
-  "no_hp_2",
-  "no_hp_3",
-  "column_break_9",
-  "jumlah_tanggungan",
   "pendidikan_terakhir",
+  "column_break_9",
   "usaha__pekerjaan",
   "bentuk_usaha",
   "status_tempat_tinggal",
   "jenis_usaha",
   "pendapatan",
+  "jumlah_tanggungan",
+  "kontak_section",
+  "email",
+  "no_telepon",
+  "no_hp_1",
+  "column_break_13",
+  "no_hp_2",
+  "no_hp_3",
+  "alamat_section",
+  "alamat",
+  "column_break_24",
   "desakelurahan",
   "kecamatan",
   "kabupatenkota",
@@ -285,12 +290,35 @@
    "fieldtype": "Attach Image",
    "hidden": 1,
    "label": "Picture"
+  },
+  {
+   "fieldname": "alamat_section",
+   "fieldtype": "Section Break",
+   "label": "Alamat"
+  },
+  {
+   "fieldname": "alamat",
+   "fieldtype": "Small Text",
+   "label": "Alamat"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kontak_section",
+   "fieldtype": "Section Break",
+   "label": "Kontak"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
   }
  ],
  "image_field": "picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-29 11:48:17.604516",
+ "modified": "2022-08-30 00:04:38.384710",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Nasabah Invest",

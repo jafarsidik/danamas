@@ -44,5 +44,28 @@
     "role": "Head Of Admin & Database"
    }
   ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Role",
+  "modified": "2022-08-30 00:47:10.217688",
+  "name": "a84a63d076",
+  "page": null,
+  "ref_doctype": "Investasi",
+  "report": "Investasi",
+  "roles": [
+   {
+    "parent": "a84a63d076",
+    "parentfield": "roles",
+    "parenttype": "Custom Role",
+    "role": "System Manager"
+   },
+   {
+    "parent": "a84a63d076",
+    "parentfield": "roles",
+    "parenttype": "Custom Role",
+    "role": "General Operational"
+   }
+  ]
  }
 ]

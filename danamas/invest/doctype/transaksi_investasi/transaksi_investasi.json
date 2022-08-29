@@ -18,6 +18,7 @@
   "nama_nasabah",
   "marketing",
   "status_arononaro",
+  "status_bilyet",
   "tanggal_pendaftaran",
   "tanggal_berakhir",
   "column_break_10",
@@ -153,7 +154,7 @@
    "fieldtype": "Section Break"
   },
   {
-   "fetch_from": "investasi.status",
+   "fetch_from": "investasi.status_aro",
    "fieldname": "status_arononaro",
    "fieldtype": "Read Only",
    "label": "Status ARO/NONARO"
@@ -176,11 +177,17 @@
    "fieldtype": "Currency",
    "label": "Management Fee",
    "read_only": 1
+  },
+  {
+   "fetch_from": "investasi.status_bilyet",
+   "fieldname": "status_bilyet",
+   "fieldtype": "Read Only",
+   "label": "Status Bilyet"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-29 11:12:05.379602",
+ "modified": "2022-08-29 14:46:36.782350",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Transaksi Investasi",

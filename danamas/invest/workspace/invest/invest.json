@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Investasi</span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Investasi\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}}]",
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Investasi</span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Investasi\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reporting\",\"col\":4}}]",
  "creation": "2022-08-23 01:36:38.121107",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -61,13 +61,31 @@
    "is_query_report": 0,
    "label": "Produk Investasi",
    "link_count": 0,
-   "link_to": "Jenis Investasi",
+   "link_to": "Produk Investasi",
    "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reporting",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rekapitulasi",
+   "link_count": 0,
+   "link_to": "Investasi",
+   "link_type": "Report",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2022-08-26 10:34:22.094150",
+ "modified": "2022-08-30 00:45:15.054886",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Invest",

@@ -4,6 +4,11 @@
 
 frappe.query_reports["Investasi"] = {
 	"filters": [
-
+		{
+            "fieldname":"cif",
+            "label":"CIF",
+            "fieldtype": "Link",
+            "options": "Nasabah Invest"
+        },
 	]
 };

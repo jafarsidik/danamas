@@ -13,7 +13,8 @@
   "marketing",
   "section_break_4",
   "bilyet",
-  "status",
+  "status_aro",
+  "status_bilyet",
   "tanggal_pendaftaran",
   "tanggal_jatuh_tempo",
   "column_break_11",
@@ -89,13 +90,6 @@
    "in_list_view": 1,
    "label": "Produk Investasi",
    "options": "Produk Investasi",
-   "reqd": 1
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "ARO\nNON ARO",
    "reqd": 1
   },
   {
@@ -195,11 +189,30 @@
    "fieldtype": "Percent",
    "label": "Management Fee (%)",
    "reqd": 1
+  },
+  {
+   "fieldname": "status_aro",
+   "fieldtype": "Select",
+   "label": "Status ARO",
+   "options": "ARO\nNON ARO",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_bilyet",
+   "fieldtype": "Select",
+   "label": "Status Bilyet",
+   "options": "Open\nPending\nClosed",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2022-08-29 12:27:25.630775",
+ "links": [
+  {
+   "link_doctype": "Transaksi Investasi",
+   "link_fieldname": "investasi"
+  }
+ ],
+ "modified": "2022-08-29 14:45:26.251971",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Investasi",
