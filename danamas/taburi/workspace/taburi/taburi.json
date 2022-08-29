@@ -96,7 +96,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-07-09 14:00:04.205376",
+ "modified": "2022-08-29 12:48:25.491624",
  "modified_by": "Administrator",
  "module": "Taburi",
  "name": "Taburi",
@@ -104,14 +104,7 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [
-  {
-   "role": "Administrator"
-  },
-  {
-   "role": "DMI System"
-  }
- ],
+ "roles": [],
  "sequence_id": 30.0,
  "shortcuts": [],
  "title": "Taburi"

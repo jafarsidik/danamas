@@ -1,7 +1,7 @@
 {
  "add_total_row": 1,
  "columns": [],
- "creation": "2022-06-20 22:35:59.321523",
+ "creation": "2022-08-29 13:53:51.907212",
  "disable_prepared_report": 1,
  "disabled": 0,
  "docstatus": 0,
@@ -9,19 +9,23 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2022-08-29 12:49:22.889385",
+ "json": "{}",
+ "letter_head": "Kop E-Statement",
+ "modified": "2022-08-29 13:57:29.617768",
  "modified_by": "Administrator",
- "module": "Taburi",
- "name": "Advisor Commission",
+ "module": "Invest",
+ "name": "Investasi",
  "owner": "Administrator",
  "prepared_report": 0,
- "query": "SELECT \r\n *\r\nFROM `tabTransaction`\r\n-- where month(transaction_date) = \"6\"\r\n-- where ao=(ao)\r\ngroup by ao_name",
- "ref_doctype": "Transaction",
- "report_name": "Advisor Commission",
+ "ref_doctype": "Investasi",
+ "report_name": "Investasi",
  "report_type": "Script Report",
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "General Operational"
   }
  ]
 }

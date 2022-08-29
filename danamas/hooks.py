@@ -10,6 +10,28 @@ app_license = "MIT"
 # Includes in <head>
 # ------------------
 fixtures = [
+    {"doctype": "Role",
+		"filters": {
+			"name": [ "in", [
+                "Admin Investasi",
+                "Admin Pinjaman",
+                "Admin Taburi",
+                "Head Of Admin & Database",
+                "Relationship Manager",
+                "Account Officer",
+                "PLT. Branch Manager",
+                "Human Resources & General Affair",
+                "Accountant & Finance",
+                "Business Development",
+                "BOD",
+                "General Operational",
+                ] ]
+		}
+	},
+    {"doctype":"Custom DocPerm"},
+    {"doctype":"Custom Role"},
+    {"doctype":"Document Naming Rule"},
+    {"doctype":"Bank"},
     {"doctype":"Workflow State"},
     {"doctype": "Workflow",
 		"filters": {

@@ -21,6 +21,16 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Nasabah",
+   "link_count": 0,
+   "link_to": "Nasabah Invest",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Investasi",
    "link_count": 0,
    "link_to": "Investasi",
@@ -49,7 +59,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Jenis Investasi",
+   "label": "Produk Investasi",
    "link_count": 0,
    "link_to": "Jenis Investasi",
    "link_type": "DocType",
@@ -57,9 +67,9 @@
    "type": "Link"
   }
  ],
- "modified": "2022-08-23 01:54:53.012717",
+ "modified": "2022-08-26 10:34:22.094150",
  "modified_by": "Administrator",
- "module": "Danamas",
+ "module": "Invest",
  "name": "Invest",
  "owner": "Administrator",
  "parent_page": "",

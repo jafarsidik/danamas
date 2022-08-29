@@ -9,12 +9,8 @@
  "field_order": [
   "kode",
   "nama",
-  "suku_bunga",
-  "sistem_bunga",
-  "column_break_5",
-  "waktu",
-  "saldo_min_pajak",
-  "persen_pajak"
+  "rate",
+  "m_fee"
  ],
  "fields": [
   {
@@ -32,45 +28,23 @@
    "reqd": 1
   },
   {
-   "fieldname": "suku_bunga",
+   "fieldname": "rate",
    "fieldtype": "Percent",
-   "label": "Suku Bunga",
+   "label": "Rate",
    "reqd": 1
   },
   {
-   "description": "Perhitungan Bunga\nSIH = Saldo x Bunga(Pertahun) x 30/360\nSIB = Saldo x (Bunga(Pertahun)/12) ",
-   "fieldname": "sistem_bunga",
-   "fieldtype": "Select",
-   "label": "Sistem Bunga",
-   "options": "Simple Interest Harian\nSimple Interest Bulanan"
-  },
-  {
-   "description": "Bulan",
-   "fieldname": "waktu",
-   "fieldtype": "Int",
-   "label": "Waktu"
-  },
-  {
-   "fieldname": "saldo_min_pajak",
-   "fieldtype": "Currency",
-   "label": "Saldo Min Pajak"
-  },
-  {
-   "fieldname": "column_break_5",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "persen_pajak",
+   "fieldname": "m_fee",
    "fieldtype": "Percent",
-   "label": "Persen Pajak"
+   "label": "Management Fee"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-23 00:53:58.839247",
+ "modified": "2022-08-29 11:54:19.378823",
  "modified_by": "Administrator",
- "module": "Danamas",
- "name": "Jenis Investasi",
+ "module": "Invest",
+ "name": "Produk Investasi",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

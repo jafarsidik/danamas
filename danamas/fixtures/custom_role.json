@@ -1,0 +1,48 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Custom Role",
+  "modified": "2022-08-29 13:30:25.010447",
+  "name": "51a39c586c",
+  "page": null,
+  "ref_doctype": "Transaction",
+  "report": "Advisor Commission",
+  "roles": [
+   {
+    "parent": "51a39c586c",
+    "parentfield": "roles",
+    "parenttype": "Custom Role",
+    "role": "System Manager"
+   },
+   {
+    "parent": "51a39c586c",
+    "parentfield": "roles",
+    "parenttype": "Custom Role",
+    "role": "Head Of Admin & Database"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Role",
+  "modified": "2022-08-29 13:30:29.713114",
+  "name": "ce76368636",
+  "page": null,
+  "ref_doctype": "Transaction",
+  "report": "Customers Balance",
+  "roles": [
+   {
+    "parent": "ce76368636",
+    "parentfield": "roles",
+    "parenttype": "Custom Role",
+    "role": "System Manager"
+   },
+   {
+    "parent": "ce76368636",
+    "parentfield": "roles",
+    "parenttype": "Custom Role",
+    "role": "Head Of Admin & Database"
+   }
+  ]
+ }
+]

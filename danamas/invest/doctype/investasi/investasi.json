@@ -1,0 +1,229 @@
+{
+ "actions": [],
+ "autoname": "field:bilyet",
+ "creation": "2022-08-23 00:37:05.776367",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "produk_investasi",
+  "column_break_2",
+  "nasabah",
+  "column_break_4",
+  "marketing",
+  "section_break_4",
+  "bilyet",
+  "status",
+  "tanggal_pendaftaran",
+  "tanggal_jatuh_tempo",
+  "column_break_11",
+  "nominal",
+  "rate",
+  "tenor",
+  "m_fee",
+  "section_break_18",
+  "profit",
+  "column_break_17",
+  "management_fee",
+  "column_break_19",
+  "profit_nasabah",
+  "section_break_21",
+  "nama_bank",
+  "column_break_23",
+  "a_n",
+  "column_break_25",
+  "no_rekening",
+  "section_break_27",
+  "signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nasabah",
+   "fieldtype": "Link",
+   "label": "Nasabah",
+   "options": "Nasabah Invest",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "marketing",
+   "fieldtype": "Link",
+   "label": "Marketing",
+   "options": "Advisor"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tanggal_pendaftaran",
+   "fieldtype": "Date",
+   "label": "Tanggal Pendaftaran"
+  },
+  {
+   "fieldname": "tanggal_jatuh_tempo",
+   "fieldtype": "Date",
+   "label": "Tanggal Berakhir",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_rekening",
+   "fieldtype": "Data",
+   "label": "No Rekening",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "produk_investasi",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Produk Investasi",
+   "options": "Produk Investasi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "ARO\nNON ARO",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Percent",
+   "label": "Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenor",
+   "fieldtype": "Int",
+   "label": "Tenor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "profit",
+   "fieldtype": "Currency",
+   "label": "Profit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "management_fee",
+   "fieldtype": "Currency",
+   "label": "Mangement Fee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "profit_nasabah",
+   "fieldtype": "Currency",
+   "label": "Profit Yg Di Bayarkan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nominal",
+   "fieldtype": "Currency",
+   "label": "Nominal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bilyet",
+   "fieldtype": "Data",
+   "label": "Bilyet",
+   "no_copy": 1,
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "nama_bank",
+   "fieldtype": "Link",
+   "label": "Nama Bank",
+   "options": "Bank",
+   "reqd": 1
+  },
+  {
+   "fieldname": "a_n",
+   "fieldtype": "Data",
+   "label": "Nama Pemilik Rekening",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "m_fee",
+   "fieldtype": "Percent",
+   "label": "Management Fee (%)",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-29 12:27:25.630775",
+ "modified_by": "Administrator",
+ "module": "Invest",
+ "name": "Investasi",
+ "name_case": "UPPER CASE",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

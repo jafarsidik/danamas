@@ -1,0 +1,209 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{investasi}.{YY}{MM}{####}",
+ "creation": "2022-08-23 01:15:41.340700",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "transaksi_investasi",
+  "tanggal_transaksi",
+  "bukti_transfer",
+  "column_break_3",
+  "investasi",
+  "nominal",
+  "section_break_4",
+  "cif_nasabah",
+  "nama_nasabah",
+  "marketing",
+  "status_arononaro",
+  "tanggal_pendaftaran",
+  "tanggal_berakhir",
+  "column_break_10",
+  "pokok",
+  "management_fee",
+  "profit",
+  "section_break_15",
+  "nama_bank",
+  "column_break_16",
+  "nama_pemilik_rekening",
+  "column_break_18",
+  "no_rekening",
+  "section_break_20",
+  "keterangan"
+ ],
+ "fields": [
+  {
+   "fieldname": "investasi",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "No Bilyet",
+   "options": "Investasi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tanggal_transaksi",
+   "fieldtype": "Datetime",
+   "label": "Tanggal Transaksi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Data Bilyet"
+  },
+  {
+   "fetch_from": "cif_nasabah.nama_lengkap",
+   "fieldname": "nama_nasabah",
+   "fieldtype": "Read Only",
+   "label": "Nama Nasabah"
+  },
+  {
+   "fetch_from": "investasi.marketing",
+   "fieldname": "marketing",
+   "fieldtype": "Link",
+   "label": "Marketing",
+   "options": "Advisor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Data Bank"
+  },
+  {
+   "fieldname": "keterangan",
+   "fieldtype": "Small Text",
+   "label": "Keterangan"
+  },
+  {
+   "fieldname": "transaksi_investasi",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transaksi",
+   "options": "Setoran Dana\nPenarikan Dana",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "investasi.nominal",
+   "fieldname": "pokok",
+   "fieldtype": "Currency",
+   "label": "Pokok",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "investasi.profit_nasabah",
+   "fieldname": "profit",
+   "fieldtype": "Currency",
+   "label": "Profit",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "investasi.nasabah",
+   "fieldname": "cif_nasabah",
+   "fieldtype": "Link",
+   "label": "CIF",
+   "options": "Nasabah Invest",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nominal",
+   "fieldtype": "Currency",
+   "label": "Nominal"
+  },
+  {
+   "fieldname": "bukti_transfer",
+   "fieldtype": "Attach",
+   "label": "Bukti Transfer"
+  },
+  {
+   "fieldname": "nama_bank",
+   "fieldtype": "Data",
+   "label": "Nama Bank"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nama_pemilik_rekening",
+   "fieldtype": "Data",
+   "label": "Nama Pemilik Rekening"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "no_rekening",
+   "fieldtype": "Data",
+   "label": "No Rekening"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "investasi.status",
+   "fieldname": "status_arononaro",
+   "fieldtype": "Read Only",
+   "label": "Status ARO/NONARO"
+  },
+  {
+   "fetch_from": "investasi.tanggal_pendaftaran",
+   "fieldname": "tanggal_pendaftaran",
+   "fieldtype": "Read Only",
+   "label": "Tanggal Pendaftaran"
+  },
+  {
+   "fetch_from": "investasi.tanggal_jatuh_tempo",
+   "fieldname": "tanggal_berakhir",
+   "fieldtype": "Read Only",
+   "label": "Tanggal Berakhir"
+  },
+  {
+   "fetch_from": "investasi.management_fee",
+   "fieldname": "management_fee",
+   "fieldtype": "Currency",
+   "label": "Management Fee",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-29 11:12:05.379602",
+ "modified_by": "Administrator",
+ "module": "Invest",
+ "name": "Transaksi Investasi",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
