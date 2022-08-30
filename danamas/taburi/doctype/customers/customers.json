@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_import": 1,
- "allow_rename": 1,
  "autoname": "format:TH-{####}",
  "creation": "2022-06-18 00:02:40.914391",
  "doctype": "DocType",
@@ -180,7 +179,7 @@
    "link_fieldname": "customers"
   }
  ],
- "modified": "2022-07-11 13:08:12.969403",
+ "modified": "2022-08-31 04:49:40.315038",
  "modified_by": "Administrator",
  "module": "Taburi",
  "name": "Customers",

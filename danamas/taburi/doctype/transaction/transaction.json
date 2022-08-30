@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:TRX-{#####}",
  "creation": "2022-06-18 00:23:19.288402",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -146,10 +147,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-30 16:18:16.084483",
+ "modified": "2022-08-31 04:49:13.126686",
  "modified_by": "Administrator",
  "module": "Taburi",
  "name": "Transaction",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
