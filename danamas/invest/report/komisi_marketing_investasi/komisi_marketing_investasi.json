@@ -1,0 +1,30 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2022-08-31 04:13:33.300224",
+ "disable_prepared_report": 1,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Kop E-Statement",
+ "modified": "2022-08-31 04:13:33.300224",
+ "modified_by": "Administrator",
+ "module": "Invest",
+ "name": "Komisi Marketing Investasi",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Investasi",
+ "report_name": "Komisi Marketing Investasi",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "General Operational"
+  }
+ ]
+}
