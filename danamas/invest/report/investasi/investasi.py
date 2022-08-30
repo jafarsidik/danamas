@@ -91,12 +91,17 @@ def execute(filters=None):
 	}]
 
 	cifsql = "i.nasabah = '{cif}'".format(cif=filters.cif) if filters.cif  else "1 = 1"
+	status_nasabahsql = "ni.status = '{status_nasabah}'".format(status_nasabah=filters.status_nasabah) if filters.status_nasabah  else "1 = 1"
+	startdatetemposql = "i.tanggal_jatuh_tempo >=Date('{from_date}')".format(from_date=filters.from_date) if filters.from_date  else "1 = 1"
+	enddatetemposql = "i.tanggal_jatuh_tempo <=Date('{to_date}')".format(to_date=filters.to_date) if filters.to_date  else "1 = 1"
+	
 	data = frappe.db.sql(
 		f"""
 		SELECT 
 			ni.nama_lengkap as full_name,
 			ni.no_hp_1 as no_hp,
 			ni.alamat as alamat,
+			ni.status as status_nasabah,
 			i.nama_bank as bank,
 			i.a_n as atas_nama,
 			i.no_rekening as no_rekening,
@@ -109,10 +114,11 @@ def execute(filters=None):
 			i.status_aro as status_aro,
 			i.nasabah as cif,
 			i.bilyet as bilyet,
-			i.status_bilyet as status_bilyet
+			i.status_bilyet as status_bilyet,
+			i.tanggal_jatuh_tempo as tanggal_jatuh_tempo
 		FROM tabInvestasi i
 		left join `tabNasabah Invest` ni on i.nasabah = ni.name
 		left join tabAdvisor ad on ad.name = i.marketing
-		WHERE ({cifsql}) 
-		""".format(cifsql=cifsql),as_dict=1)
+		WHERE ({cifsql}) and ({status_nasabahsql}) and ({startdatetemposql}) and ({enddatetemposql})
+		""".format(cifsql=cifsql,status_nasabahsql=status_nasabahsql,startdatetemposql=startdatetemposql,enddatetemposql=enddatetemposql),as_dict=1)
 	return columns, data

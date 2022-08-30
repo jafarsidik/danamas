@@ -14,6 +14,7 @@
   "section_break_4",
   "bilyet",
   "status_aro",
+  "penarikan_komisi",
   "status_bilyet",
   "tanggal_pendaftaran",
   "tanggal_jatuh_tempo",
@@ -24,10 +25,10 @@
   "m_fee",
   "section_break_18",
   "profit",
-  "column_break_17",
   "management_fee",
   "column_break_19",
   "profit_nasabah",
+  "profit_pertahun",
   "section_break_21",
   "nama_bank",
   "column_break_23",
@@ -119,7 +120,7 @@
   {
    "fieldname": "profit_nasabah",
    "fieldtype": "Currency",
-   "label": "Profit Yg Di Bayarkan",
+   "label": "Profit Yg Dibayarkan Perbulan",
    "read_only": 1
   },
   {
@@ -153,10 +154,6 @@
   {
    "fieldname": "section_break_18",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_17",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "column_break_19",
@@ -203,6 +200,19 @@
    "label": "Status Bilyet",
    "options": "Open\nPending\nClosed",
    "reqd": 1
+  },
+  {
+   "fieldname": "penarikan_komisi",
+   "fieldtype": "Select",
+   "label": "Penarikan Profit",
+   "options": "Bulanan\nTahunan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "profit_pertahun",
+   "fieldtype": "Currency",
+   "label": "Profit Yang Dibayarkan Pertahun",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -212,7 +222,7 @@
    "link_fieldname": "investasi"
   }
  ],
- "modified": "2022-08-29 14:45:26.251971",
+ "modified": "2022-08-30 15:22:04.412378",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Investasi",

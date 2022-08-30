@@ -7,6 +7,7 @@
  "field_order": [
   "data_nasabah_section",
   "nama_lengkap",
+  "status",
   "no_ktp",
   "no_kartu_keluarga",
   "tempat_lahir",
@@ -313,12 +314,19 @@
   {
    "fieldname": "column_break_13",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Aktif\nNon Aktif",
+   "reqd": 1
   }
  ],
  "image_field": "picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-30 00:04:38.384710",
+ "modified": "2022-08-30 15:04:57.799667",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Nasabah Invest",

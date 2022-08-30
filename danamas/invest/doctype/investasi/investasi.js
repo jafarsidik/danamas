@@ -32,9 +32,11 @@ frappe.ui.form.on('Investasi', {
 		let profit  = (nominal * rate);
 		let fee = (profit* m_fee);
 		let profit_nasabah = (profit - fee);
+		let profit_pertahun = (profit_nasabah * 12)
 		frm.set_value('profit', profit);
 		frm.set_value('management_fee', fee);
 		frm.set_value('profit_nasabah', profit_nasabah);
+		frm.set_value('profit_pertahun', profit_pertahun);
 		
 
 	},
@@ -46,9 +48,11 @@ frappe.ui.form.on('Investasi', {
 		let profit  = (nominal * rate);
 		let fee = (profit* m_fee);
 		let profit_nasabah = (profit - fee);
+		let profit_pertahun = (profit_nasabah * 12)
 		frm.set_value('profit', profit);
 		frm.set_value('management_fee', fee);
 		frm.set_value('profit_nasabah', profit_nasabah);
+		frm.set_value('profit_pertahun', profit_pertahun);
 		
 
 	},
@@ -60,8 +64,10 @@ frappe.ui.form.on('Investasi', {
 		let profit  = (nominal * rate);
 		let fee = (profit* m_fee);
 		let profit_nasabah = (profit - fee);
+		let profit_pertahun = (profit_nasabah * 12)
 		frm.set_value('profit', profit);
 		frm.set_value('management_fee', fee);
 		frm.set_value('profit_nasabah', profit_nasabah);
+		frm.set_value('profit_pertahun', profit_pertahun);
 	}
 });
