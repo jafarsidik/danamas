@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "autoname": "format:10022021{####}",
  "creation": "2022-08-26 10:32:20.581499",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -326,11 +327,12 @@
  "image_field": "picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-30 15:04:57.799667",
+ "modified": "2022-09-01 20:44:23.121013",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Nasabah Invest",
  "name_case": "UPPER CASE",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
