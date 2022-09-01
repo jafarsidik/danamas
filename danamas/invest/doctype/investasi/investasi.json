@@ -7,10 +7,11 @@
  "engine": "InnoDB",
  "field_order": [
   "produk_investasi",
-  "column_break_2",
   "nasabah",
-  "column_break_4",
   "marketing",
+  "column_break_2",
+  "nama_nasabah",
+  "alamat_nasabah",
   "section_break_4",
   "bilyet",
   "status_aro",
@@ -49,10 +50,6 @@
    "label": "Nasabah",
    "options": "Nasabah Invest",
    "reqd": 1
-  },
-  {
-   "fieldname": "column_break_4",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "marketing",
@@ -213,6 +210,18 @@
    "fieldtype": "Currency",
    "label": "Profit Yang Dibayarkan Pertahun",
    "read_only": 1
+  },
+  {
+   "fetch_from": "nasabah.nama_lengkap",
+   "fieldname": "nama_nasabah",
+   "fieldtype": "Read Only",
+   "label": "Nama Nasabah"
+  },
+  {
+   "fetch_from": "nasabah.alamat",
+   "fieldname": "alamat_nasabah",
+   "fieldtype": "Read Only",
+   "label": "Alamat Nasabah"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -222,7 +231,7 @@
    "link_fieldname": "investasi"
   }
  ],
- "modified": "2022-08-30 15:22:04.412378",
+ "modified": "2022-09-01 10:49:47.076805",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Investasi",
