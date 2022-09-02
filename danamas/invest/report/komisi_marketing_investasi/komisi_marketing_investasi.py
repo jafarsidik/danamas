@@ -124,6 +124,6 @@ def execute(filters=None):
 			FROM tabInvestasi i
 			left join `tabNasabah Invest` ni on i.nasabah = ni.name
 			left join tabAdvisor ad on ad.name = i.marketing
-		WHERE ({cifsql}) and ({marketingsql}) and  ({startdatetemposql}) and ({enddatetemposql})
+		WHERE i.status_penarikan_dana = "Belum" and ({cifsql}) and ({marketingsql}) and  ({startdatetemposql}) and ({enddatetemposql})
 		""".format(cifsql=cifsql,marketingsql=marketingsql,startdatetemposql=startdatetemposql,enddatetemposql=enddatetemposql),as_dict=1)
 	return columns, data

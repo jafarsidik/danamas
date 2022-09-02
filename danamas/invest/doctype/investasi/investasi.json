@@ -19,6 +19,8 @@
   "status_bilyet",
   "tanggal_pendaftaran",
   "tanggal_jatuh_tempo",
+  "status_setoran_dana",
+  "status_penarikan_dana",
   "column_break_11",
   "nominal",
   "rate",
@@ -222,6 +224,20 @@
    "fieldname": "alamat_nasabah",
    "fieldtype": "Read Only",
    "label": "Alamat Nasabah"
+  },
+  {
+   "default": "Belum",
+   "fieldname": "status_setoran_dana",
+   "fieldtype": "Data",
+   "label": "Status Setoran Dana",
+   "read_only": 1
+  },
+  {
+   "default": "Belum",
+   "fieldname": "status_penarikan_dana",
+   "fieldtype": "Data",
+   "label": "Status Penarikan Dana",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -231,7 +247,7 @@
    "link_fieldname": "investasi"
   }
  ],
- "modified": "2022-09-01 10:49:47.076805",
+ "modified": "2022-09-02 15:25:33.494257",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Investasi",

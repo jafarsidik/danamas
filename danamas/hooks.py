@@ -30,7 +30,6 @@ fixtures = [
 	},
     {"doctype":"Custom DocPerm"},
     {"doctype":"Custom Role"},
-    {"doctype":"Document Naming Rule"},
     {"doctype":"Bank"},
     {"doctype":"Workflow State"},
     {"doctype": "Workflow",
