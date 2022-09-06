@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "format:TH-{####}",
  "creation": "2022-06-18 00:02:40.914391",
  "doctype": "DocType",
@@ -179,7 +180,7 @@
    "link_fieldname": "customers"
   }
  ],
- "modified": "2022-08-31 04:49:40.315038",
+ "modified": "2022-09-06 11:20:45.845228",
  "modified_by": "Administrator",
  "module": "Taburi",
  "name": "Customers",
@@ -207,6 +208,7 @@
    "share": 1
   }
  ],
+ "search_fields": "full_name",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [
@@ -215,7 +217,6 @@
    "title": "Testing"
   }
  ],
- "title_field": "full_name",
  "track_changes": 1,
  "track_seen": 1,
  "track_views": 1

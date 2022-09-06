@@ -11,6 +11,9 @@
   "nama_nasbah",
   "nama_cabang",
   "nama_kelompok",
+  "nama_bank",
+  "nama_pemilik_rekening",
+  "no_rekening",
   "column_break_2",
   "nama_sales",
   "tujuan_pembiayaan",
@@ -393,6 +396,22 @@
    "fieldtype": "Date",
    "label": "Tanggal Pencairan",
    "read_only": 1
+  },
+  {
+   "fieldname": "nama_bank",
+   "fieldtype": "Link",
+   "label": "Nama Bank",
+   "options": "Bank"
+  },
+  {
+   "fieldname": "nama_pemilik_rekening",
+   "fieldtype": "Data",
+   "label": "Nama Pemilik Rekening"
+  },
+  {
+   "fieldname": "no_rekening",
+   "fieldtype": "Data",
+   "label": "No Rekening"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -409,7 +428,7 @@
    "link_fieldname": "aplikasi_number"
   }
  ],
- "modified": "2022-08-05 08:24:43.324798",
+ "modified": "2022-09-06 11:15:09.051077",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Aplikasi",
