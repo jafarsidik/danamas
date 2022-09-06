@@ -31,6 +31,7 @@ fixtures = [
     {"doctype":"Custom DocPerm"},
     {"doctype":"Custom Role"},
     {"doctype":"Bank"},
+    {"doctype":"Web Form"},
     {"doctype":"Workflow State"},
     {"doctype": "Workflow",
 		"filters": {
