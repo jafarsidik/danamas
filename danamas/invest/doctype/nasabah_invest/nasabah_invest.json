@@ -1,12 +1,13 @@
 {
  "actions": [],
- "autoname": "format:10022021{####}",
+ "autoname": "format:10022021{kode_nasabah}",
  "creation": "2022-08-26 10:32:20.581499",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "data_nasabah_section",
+  "kode_nasabah",
   "nama_lengkap",
   "status",
   "no_ktp",
@@ -322,12 +323,18 @@
    "label": "Status",
    "options": "Aktif\nNon Aktif",
    "reqd": 1
+  },
+  {
+   "fieldname": "kode_nasabah",
+   "fieldtype": "Data",
+   "label": "Kode Nasabah",
+   "reqd": 1
   }
  ],
  "image_field": "picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-01 20:44:23.121013",
+ "modified": "2022-09-06 12:45:03.142789",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Nasabah Invest",
