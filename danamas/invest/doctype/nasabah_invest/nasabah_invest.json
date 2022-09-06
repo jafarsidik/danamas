@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_rename": 1,
  "autoname": "format:10022021{kode_nasabah}",
  "creation": "2022-08-26 10:32:20.581499",
  "doctype": "DocType",
@@ -325,6 +326,7 @@
    "reqd": 1
   },
   {
+   "description": "10022021xxxx <br>\nContoh : 0001 <br>\n*) Hanya Menginput 4 Digit No Di belakang",
    "fieldname": "kode_nasabah",
    "fieldtype": "Data",
    "label": "Kode Nasabah",
@@ -334,7 +336,7 @@
  "image_field": "picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-06 12:45:03.142789",
+ "modified": "2022-09-06 13:02:58.273026",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Nasabah Invest",
