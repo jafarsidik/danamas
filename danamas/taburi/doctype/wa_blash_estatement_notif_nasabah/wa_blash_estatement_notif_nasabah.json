@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-09-15 10:57:06.651459",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "nasabah",
+  "no_hp",
+  "total",
+  "link_download",
+  "redaksi"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "nasabah",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Nasabah",
+   "options": "Customers",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "no_hp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "No HP"
+  },
+  {
+   "columns": 2,
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Total"
+  },
+  {
+   "fieldname": "link_download",
+   "fieldtype": "Small Text",
+   "label": "Link Download"
+  },
+  {
+   "columns": 5,
+   "fieldname": "redaksi",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Redaksi"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-09-15 11:50:41.428279",
+ "modified_by": "Administrator",
+ "module": "Taburi",
+ "name": "WA Blash Estatement Notif Nasabah",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

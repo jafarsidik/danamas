@@ -45,16 +45,19 @@
    "label": "Informasi Rekening"
   },
   {
+   "fetch_from": "aplikasi.nama_bank",
    "fieldname": "bank",
    "fieldtype": "Data",
    "label": "Bank"
   },
   {
+   "fetch_from": "aplikasi.nama_pemilik_rekening",
    "fieldname": "nama_rekening",
    "fieldtype": "Data",
    "label": "Nama Rekening"
   },
   {
+   "fetch_from": "aplikasi.no_rekening",
    "fieldname": "no_rekening",
    "fieldtype": "Data",
    "label": "No Rekening"
@@ -85,7 +88,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-08-05 10:14:04.284468",
+ "modified": "2022-09-15 10:46:17.528798",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Pencairan Pinjaman",
