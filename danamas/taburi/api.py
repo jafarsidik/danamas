@@ -17,12 +17,12 @@ from frappe.utils.pdf import get_pdf
 from frappe.utils.print_format import download_pdf
 from frappe.model.document import Document
 
-@frappe.whitelist()
+
 def createEstatement():
     list_data = []
     #before_30_days = add_to_date(today(), days=-30, as_string=True)
     start_date = add_to_date(today(), days=-30, as_string=True)
-    end_date = add_to_date(today(), days=-2, as_string=True)
+    end_date = add_to_date(today(), days=-1, as_string=True)
 
     get_nasabah = frappe.db.get_list('Customers',
         fields=['name', 'full_name','phone_number'],
@@ -112,18 +112,23 @@ def sendWA(**kwargs):
     args = frappe._dict(kwargs)
     url = "https://starsender.online/api/sendText"
     getWA = frappe.get_doc('WA Blash Estatement Notif',args.docname)
-    
+   
     child = getWA.wa_blash_estatement_notif_nasabah
-    #size = len(child)
+    size = len(child)
     res = []
     for rows in child:
         res.append(rows)
         headers = { 'apikey': '52527f0d29a2b60c55ef7374fe9f57b700ed10ff' }
-        payload = { 'tujuan': '087771859551','message': rows.redaksi}
+        payload = { 'tujuan': "087771859551",'message': rows.redaksi}
         requests.request("POST", url, headers=headers, data=payload)
-        #progress = i / size * 100
-        #publish_progress(percent=progress, title="Reading the file")
-        
+        progress = ( ( rows.idx / size ) * 100 ) 
+        frappe.publish_progress(percent=progress, title="Proses Pengiriman Notifikasi Whatsapp",description = 'Progress '+ str(progress) + '%')
+    
+    getWA.status_pengiriman = "Sudah Dikirim"
+    getWA.save()
+    # clear messages
+    frappe.local.message_log =[]
+    frappe.msgprint(_('{0} records Notifikasi E-Statement Nasabah Taburi Sukses Terkirim').format(size), title=_('Success'), indicator='green')
     return res
 
 def sendTextDMI(docname, phone_number, full_name, total_saldo):

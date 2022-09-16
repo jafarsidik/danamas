@@ -4,7 +4,6 @@
 
 frappe.ui.form.on('WA Blash Estatement Notif', {
 	refresh: function(frm) {
-		frappe.show_progress('Loading..', 70, 100, 'Please wait');
 		frm.add_custom_button(__('Send'), function(){
 			
 			frappe.confirm(
@@ -17,9 +16,8 @@ frappe.ui.form.on('WA Blash Estatement Notif', {
 						}
 					}).then(r => {
 						console.log(r.message)
+						show_alert('Pengiriman Notifikasi E-Statement Nasabah Taburi Sukses')
 					})
-					//frappe.show_progress(title, count, total, description)
-					//show_alert('Thanks for continue here!')
 				}
 			)
 			
