@@ -160,7 +160,10 @@ scheduler_events = {
 # 		"danamas.tasks.monthly"
 # 	],
     "cron":{
-        "0 15 10 * *":[
+        # "0 15 10 * *":[
+        #     "danamas.taburi.api.createEstatement"
+        # ],
+        "40 11 19 * *":[
             "danamas.taburi.api.createEstatement"
         ],
         # "10 * * * *":[
