@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "autoname": "format:{cif}-{no_bilyet}",
+ "creation": "2022-09-29 23:38:02.276482",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cif",
+  "nama_lengkap",
+  "no_bilyet",
+  "produk",
+  "status_aro",
+  "column_break_5",
+  "tanggal_pendaftaran",
+  "tanggal_berakhir",
+  "nominal",
+  "profit_perbulan",
+  "profit_pertahun",
+  "transaction_section",
+  "transaksi"
+ ],
+ "fields": [
+  {
+   "fieldname": "produk",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Produk",
+   "options": "Produk Investasi",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_aro",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status ARO",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tanggal_pendaftaran",
+   "fieldtype": "Date",
+   "label": "Tanggal Pendaftaran",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tanggal_berakhir",
+   "fieldtype": "Date",
+   "label": "Tanggal Berakhir",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nominal",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Nominal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "profit_perbulan",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Profit Perbulan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "profit_pertahun",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Profit Pertahun",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transaction_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "no_bilyet",
+   "fieldtype": "Data",
+   "label": "No Bilyet",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cif",
+   "fieldtype": "Link",
+   "label": "CIF",
+   "options": "Nasabah Invest",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transaksi",
+   "fieldtype": "Table",
+   "label": "Transaksi",
+   "options": "Estatement Investasi Transaksi"
+  },
+  {
+   "fetch_from": "cif.nama_lengkap",
+   "fieldname": "nama_lengkap",
+   "fieldtype": "Data",
+   "label": "Nama Lengkap",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-09-30 01:12:37.845454",
+ "modified_by": "Administrator",
+ "module": "Invest",
+ "name": "Estatement Investasi",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

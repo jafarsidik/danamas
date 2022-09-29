@@ -88,7 +88,7 @@ def createEstatement():
         url_file = f"""{get_url()}/api/method/danamas.taburi.api.download_pdf?doctype=EStatement&name={doc.name}&format=E-State"""
         docwa.append("wa_blash_estatement_notif_nasabah",{
             "nasabah":rows.name,
-            "no_hp":rows.phone_number,
+            "no_hp":rows.no_hp,
             "total":data_total[0].grand_total,
             "link_download":url_file,
             "redaksi": f"""Halo *Bpk/Ibu {rows.full_name},*\nTerimakasih telah menabung di *Danamas*. dan memilih Produk *TABURI* sebagai *Sarana anda untuk Meraih Masa Depan.* \n*Saat ini saldo anda* sudah *Terkumpul sejumlah Rp.{data_total[0].grand_total}* \n*TABUNGAN TANPA BIAYA ADMIN*\n Untuk Info lebih lanjut serta permintaan *Penyetoran/Penarikan*, silahkan hubungi nomor berikut :  0822-2278-2668 *HASLINDA*\nTingkatkan terus jumlah saldo tabungan anda untuk mendapatkan return s/d 5% PA\n\n\nSilahkan download bukti E-Statement dengan mengklik link di bawah ini:\n{url_file}
@@ -117,12 +117,17 @@ def sendWA(**kwargs):
     size = len(child)
     res = []
     for rows in child:
-        res.append(rows)
-        headers = { 'apikey': '52527f0d29a2b60c55ef7374fe9f57b700ed10ff' }
-        payload = { 'tujuan': "087771859551",'message': rows.redaksi}
+        #production
+        headers = { 'apikey': '19c4018fb8e6802e6df74964e67e7026f3ee61c9' }
+        payload = { 'tujuan': rows.no_hp,'message': rows.redaksi}
+        #development
+        #headers = { 'apikey': '52527f0d29a2b60c55ef7374fe9f57b700ed10ff' }
+        #payload = { 'tujuan': '087771859551','message': rows.redaksi}
+
         requests.request("POST", url, headers=headers, data=payload)
         progress = ( ( rows.idx / size ) * 100 ) 
-        frappe.publish_progress(percent=progress, title="Proses Pengiriman Notifikasi Whatsapp",description = 'Progress '+ str(progress) + '%')
+        frappe.publish_progress(percent=progress, title="Proses Pengiriman Notifikasi Whatsapp",description = 'Proses Pengiriman '+ str(rows.nasabah) + '...')
+        
     
     getWA.status_pengiriman = "Sudah Dikirim"
     getWA.save()

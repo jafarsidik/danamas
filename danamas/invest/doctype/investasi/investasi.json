@@ -16,16 +16,17 @@
   "bilyet",
   "status_aro",
   "penarikan_komisi",
+  "penarikan_profit_diawal_diakhir",
   "status_bilyet",
   "tanggal_pendaftaran",
   "tanggal_jatuh_tempo",
-  "status_setoran_dana",
-  "status_penarikan_dana",
   "column_break_11",
   "nominal",
   "rate",
   "tenor",
   "m_fee",
+  "status_setoran_dana",
+  "status_penarikan_dana",
   "section_break_18",
   "profit",
   "management_fee",
@@ -49,6 +50,9 @@
   {
    "fieldname": "nasabah",
    "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Nasabah",
    "options": "Nasabah Invest",
    "reqd": 1
@@ -203,7 +207,7 @@
   {
    "fieldname": "penarikan_komisi",
    "fieldtype": "Select",
-   "label": "Penarikan Profit",
+   "label": "Kalender Penarikan Profit ",
    "options": "Bulanan\nTahunan",
    "reqd": 1
   },
@@ -238,6 +242,12 @@
    "fieldtype": "Data",
    "label": "Status Penarikan Dana",
    "read_only": 1
+  },
+  {
+   "fieldname": "penarikan_profit_diawal_diakhir",
+   "fieldtype": "Select",
+   "label": "Penarikan Profit ",
+   "options": "Di Awal(Diskonto)\nDi Akhir"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -245,9 +255,13 @@
   {
    "link_doctype": "Transaksi Investasi",
    "link_fieldname": "investasi"
+  },
+  {
+   "link_doctype": "Estatement Investasi",
+   "link_fieldname": "no_bilyet"
   }
  ],
- "modified": "2022-09-02 15:25:33.494257",
+ "modified": "2022-09-30 01:51:43.106986",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Investasi",

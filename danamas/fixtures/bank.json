@@ -2,6 +2,54 @@
  {
   "docstatus": 0,
   "doctype": "Bank",
+  "kode": "451",
+  "modified": "2022-09-07 13:40:06.067110",
+  "nama": "BANK SYARIAH INDONESIA",
+  "name": "(451) - BANK SYARIAH INDONESIA"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Bank",
+  "kode": "013",
+  "modified": "2022-09-07 16:20:38.603344",
+  "nama": "BANK PERMATA",
+  "name": "(013) - BANK PERMATA"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Bank",
+  "kode": "111",
+  "modified": "2022-09-08 20:06:40.234732",
+  "nama": "BANK DKI",
+  "name": "(111) - BANK DKI"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Bank",
+  "kode": "535",
+  "modified": "2022-09-08 21:14:58.254349",
+  "nama": "Bank Kesejahteraan Ekonomi (Bank BKE).",
+  "name": "(535) - Bank Kesejahteraan Ekonomi (Bank BKE)."
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Bank",
+  "kode": "153",
+  "modified": "2022-09-12 14:31:05.638741",
+  "nama": "SINARMAS",
+  "name": "(153) - SINARMAS"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Bank",
+  "kode": "110",
+  "modified": "2022-09-13 22:27:27.657359",
+  "nama": "BANK BJB",
+  "name": "(110) - BANK BJB"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Bank",
   "kode": "002",
   "modified": "2022-08-29 12:22:15.579424",
   "nama": "PT BANK RAKYAT INDONESIA (PERSERO) Tbk",

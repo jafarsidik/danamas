@@ -68,9 +68,19 @@
   },
   {
    "hidden": 0,
+   "is_query_report": 1,
+   "label": "Komisi Marketing",
+   "link_count": 0,
+   "link_to": "Komisi Marketing Investasi",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
    "is_query_report": 0,
    "label": "Reporting",
-   "link_count": 1,
+   "link_count": 3,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -93,9 +103,19 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "E Statement",
+   "link_count": 0,
+   "link_to": "Estatement Investasi",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2022-08-31 04:32:05.009248",
+ "modified": "2022-09-30 01:28:04.827579",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Invest",

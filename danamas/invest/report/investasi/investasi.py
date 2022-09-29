@@ -58,6 +58,16 @@ def execute(filters=None):
 		"fieldtype": "Currency"
 	},
 	{
+		"fieldname": "profit_perbulan",
+		"label": "Profit Perbulan",
+		"fieldtype": "Currency"
+	},
+	{
+		"fieldname": "profit_pertahun",
+		"label": "Profit Pertahun",
+		"fieldtype": "Currency"
+	},
+	{
 		"fieldname": "tenor",
 		"label": "Tenor",
 		"fieldtype": "Data"
@@ -109,6 +119,8 @@ def execute(filters=None):
 			i.tanggal_jatuh_tempo as tanggal_berakhir,
 			i.produk_investasi as produk,
 			i.nominal as nominal,
+			i.profit_nasabah as profit_perbulan,
+			i.profit_pertahun as profit_pertahun,
 			i.tenor as tenor,
 			i.rate as rate,
 			i.status_aro as status_aro,

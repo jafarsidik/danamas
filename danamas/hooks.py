@@ -32,6 +32,7 @@ fixtures = [
     {"doctype":"Custom Role"},
     {"doctype":"Bank"},
     {"doctype":"Web Form"},
+    {"doctype":"Notification"},
     {"doctype":"Workflow State"},
     {"doctype": "Workflow",
 		"filters": {
@@ -160,12 +161,12 @@ scheduler_events = {
 # 		"danamas.tasks.monthly"
 # 	],
     "cron":{
-        # "0 15 10 * *":[
-        #     "danamas.taburi.api.createEstatement"
-        # ],
-        "40 11 19 * *":[
+        "0 15 10 * *":[
             "danamas.taburi.api.createEstatement"
         ],
+        #"40 11 19 * *":[
+        #    "danamas.taburi.api.createEstatement"
+        #],
         # "10 * * * *":[
         #     "danamas.taburi.api.createEstatement"
         # ]

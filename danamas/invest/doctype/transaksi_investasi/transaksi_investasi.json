@@ -112,6 +112,9 @@
    "fetch_from": "investasi.nasabah",
    "fieldname": "cif_nasabah",
    "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "CIF",
    "options": "Nasabah Invest",
    "read_only": 1
@@ -187,7 +190,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-02 15:51:35.795378",
+ "modified": "2022-09-30 02:04:58.513298",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Transaksi Investasi",
