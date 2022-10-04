@@ -16,7 +16,6 @@
   "bilyet",
   "status_aro",
   "penarikan_komisi",
-  "penarikan_profit_diawal_diakhir",
   "status_bilyet",
   "tanggal_pendaftaran",
   "tanggal_jatuh_tempo",
@@ -207,9 +206,8 @@
   {
    "fieldname": "penarikan_komisi",
    "fieldtype": "Select",
-   "label": "Kalender Penarikan Profit ",
-   "options": "Bulanan\nTahunan",
-   "reqd": 1
+   "label": "Penarikan Profit ",
+   "options": "Bulanan\nTahunan\nDi Awal(Diskonto)\nDi Akhir"
   },
   {
    "fieldname": "profit_pertahun",
@@ -242,12 +240,6 @@
    "fieldtype": "Data",
    "label": "Status Penarikan Dana",
    "read_only": 1
-  },
-  {
-   "fieldname": "penarikan_profit_diawal_diakhir",
-   "fieldtype": "Select",
-   "label": "Penarikan Profit ",
-   "options": "Di Awal(Diskonto)\nDi Akhir"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -261,7 +253,7 @@
    "link_fieldname": "no_bilyet"
   }
  ],
- "modified": "2022-09-30 01:51:43.106986",
+ "modified": "2022-10-04 11:27:14.775989",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Investasi",

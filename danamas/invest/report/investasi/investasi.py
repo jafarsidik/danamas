@@ -83,6 +83,11 @@ def execute(filters=None):
 		"fieldtype": "Data"
 	},
 	{
+		"fieldname": "penarikan_komisi",
+		"label": "Penarikan Profit",
+		"fieldtype": "Select"
+	},
+	{
 		"fieldname": "cif",
 		"label": "CIF",
 		"fieldtype": "Link",
@@ -123,6 +128,7 @@ def execute(filters=None):
 			i.profit_pertahun as profit_pertahun,
 			i.tenor as tenor,
 			i.rate as rate,
+			i.penarikan_komisi as penarikan_komisi,
 			i.status_aro as status_aro,
 			i.nasabah as cif,
 			i.bilyet as bilyet,
