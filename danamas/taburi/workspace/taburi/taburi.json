@@ -106,7 +106,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-09-15 11:55:06.640087",
+ "modified": "2022-10-07 00:19:50.414575",
  "modified_by": "Administrator",
  "module": "Taburi",
  "name": "Taburi",
@@ -115,7 +115,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 30.0,
+ "sequence_id": 12.0,
  "shortcuts": [],
  "title": "Taburi"
 }

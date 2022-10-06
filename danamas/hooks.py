@@ -33,6 +33,7 @@ fixtures = [
     {"doctype":"Bank"},
     {"doctype":"Web Form"},
     {"doctype":"Notification"},
+    {"doctype":"Workspace"},
     {"doctype":"Workflow State"},
     {"doctype": "Workflow",
 		"filters": {
