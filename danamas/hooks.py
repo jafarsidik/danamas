@@ -32,7 +32,7 @@ fixtures = [
     {"doctype":"Custom Role"},
     {"doctype":"Bank"},
     {"doctype":"Web Form"},
-    {"doctype":"Notification"},
+    #{"doctype":"Notification"},
     {"doctype":"Workspace"},
     {"doctype":"Workflow State"},
     {"doctype": "Workflow",
