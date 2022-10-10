@@ -88,7 +88,7 @@ def createEstatement():
         url_file = f"""{get_url()}/api/method/danamas.taburi.api.download_pdf?doctype=EStatement&name={doc.name}&format=E-State"""
         docwa.append("wa_blash_estatement_notif_nasabah",{
             "nasabah":rows.name,
-            "no_hp":rows.no_hp,
+            "no_hp":rows.phone_number,
             "total":data_total[0].grand_total,
             "link_download":url_file,
             "redaksi": f"""Halo *Bpk/Ibu {rows.full_name},*\nTerimakasih telah menabung di *Danamas*. dan memilih Produk *TABURI* sebagai *Sarana anda untuk Meraih Masa Depan.* \n*Saat ini saldo anda* sudah *Terkumpul sejumlah Rp.{data_total[0].grand_total}* \n*TABUNGAN TANPA BIAYA ADMIN*\n Untuk Info lebih lanjut serta permintaan *Penyetoran/Penarikan*, silahkan hubungi nomor berikut :  0822-2278-2668 *HASLINDA*\nTingkatkan terus jumlah saldo tabungan anda untuk mendapatkan return s/d 5% PA\n\n\nSilahkan download bukti E-Statement dengan mengklik link di bawah ini:\n{url_file}
