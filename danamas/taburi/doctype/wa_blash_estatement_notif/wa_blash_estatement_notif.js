@@ -12,11 +12,15 @@ frappe.ui.form.on('WA Blash Estatement Notif', {
 					frappe.call({
 						method:'danamas.taburi.api.sendWA', 
 						args:{
-							'docname': frm.doc.name
+							'docname': frm.doc.name,
+							'count':1,
+							'key':1
+						},
+						callback: (r) => {
+							if(r.message[0] === 100){
+								frappe.show_alert('Pengiriman Notifikasi E-Statement Nasabah Taburi Sukses')
+							}
 						}
-					}).then(r => {
-						console.log(r.message)
-						show_alert('Pengiriman Notifikasi E-Statement Nasabah Taburi Sukses')
 					})
 				}
 			)

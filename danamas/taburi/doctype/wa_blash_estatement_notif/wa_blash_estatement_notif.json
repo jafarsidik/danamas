@@ -7,33 +7,33 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "start_date",
-  "end_date",
+  "nasabah",
+  "estatement",
+  "no_hp",
+  "total",
   "column_break_2",
   "status_pengiriman",
+  "start_date",
+  "end_date",
   "section_break_4",
-  "wa_blash_estatement_notif_nasabah"
+  "link_download",
+  "redaksi"
  ],
  "fields": [
   {
    "fieldname": "start_date",
    "fieldtype": "Date",
-   "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Start Date"
+   "label": "Start Date",
+   "read_only": 1
   },
   {
    "fieldname": "end_date",
    "fieldtype": "Date",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "End Date"
-  },
-  {
-   "fieldname": "wa_blash_estatement_notif_nasabah",
-   "fieldtype": "Table",
-   "label": "WA Blash Estatement Notif Nasabah",
-   "options": "WA Blash Estatement Notif Nasabah"
+   "label": "End Date",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_2",
@@ -50,14 +50,50 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status Pengiriman",
-   "options": "Belum Dikirim\nSudah Dikirim",
-   "read_only": 1
+   "options": "Belum Dikirim\nSudah Dikirim"
+  },
+  {
+   "fieldname": "nasabah",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Nasabah",
+   "options": "Customers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_hp",
+   "fieldtype": "Data",
+   "label": "No HP"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  },
+  {
+   "fieldname": "link_download",
+   "fieldtype": "Small Text",
+   "label": "Link Download"
+  },
+  {
+   "fieldname": "redaksi",
+   "fieldtype": "Small Text",
+   "label": "Redaksi"
+  },
+  {
+   "fieldname": "estatement",
+   "fieldtype": "Link",
+   "label": "E Statement",
+   "options": "EStatement",
+   "reqd": 1
   }
  ],
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-16 00:37:33.115792",
+ "modified": "2022-10-11 20:57:32.389179",
  "modified_by": "Administrator",
  "module": "Taburi",
  "name": "WA Blash Estatement Notif",
