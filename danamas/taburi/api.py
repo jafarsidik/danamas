@@ -111,11 +111,11 @@ def sendWA(**kwargs):
     getWA = frappe.get_doc('WA Blash Estatement Notif',args.docname)
 
     #production
-    #headers = { 'apikey': '19c4018fb8e6802e6df74964e67e7026f3ee61c9' }
-    #payload = { 'tujuan': getWA.no_hp,'message': getWA.redaksi}
+    headers = { 'apikey': '19c4018fb8e6802e6df74964e67e7026f3ee61c9' }
+    payload = { 'tujuan': getWA.no_hp,'message': getWA.redaksi}
     #development
-    headers = { 'apikey': '52527f0d29a2b60c55ef7374fe9f57b700ed10ff' }
-    payload = { 'tujuan': '087771859551','message': getWA.redaksi}
+    #headers = { 'apikey': '52527f0d29a2b60c55ef7374fe9f57b700ed10ff' }
+    #payload = { 'tujuan': '087771859551','message': getWA.redaksi}
 
     requests.request("POST", url, headers=headers, data=payload)
     progress = ( ( int(args.key) / int(args.count) ) * 100 ) 
