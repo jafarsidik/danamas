@@ -1,7 +1,7 @@
 {
  "charts": [],
  "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Investasi</span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Investasi\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reporting\",\"col\":4}}]",
- "creation": "2022-08-23 01:36:38.121107",
+ "creation": "2022-10-16 22:10:29.212423",
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -44,24 +44,6 @@
    "label": "Transaksi Investasi",
    "link_count": 0,
    "link_to": "Transaksi Investasi",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Master",
-   "link_count": 1,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Produk Investasi",
-   "link_count": 0,
-   "link_to": "Produk Investasi",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -113,13 +95,30 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Master",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Produk Investasi",
+   "link_count": 0,
+   "link_to": "Produk Investasi",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2022-10-07 00:19:50.607500",
+ "modified": "2022-10-16 23:01:57.248609",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Invest",
- "owner": "Administrator",
  "parent_page": "",
  "public": 1,
  "quick_lists": [],

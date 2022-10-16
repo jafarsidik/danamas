@@ -30,7 +30,7 @@ fixtures = [
 	},
     {"doctype":"Custom DocPerm"},
     {"doctype":"Custom Role"},
-    {"doctype":"Bank"},
+    #{"doctype":"Bank"},
     {"doctype":"Web Form"},
     #{"doctype":"Notification"},
     {"doctype":"Workspace"},

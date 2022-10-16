@@ -14,8 +14,8 @@ class Investasi(Document):
 		doc.tanggal_pendaftaran = self.tanggal_pendaftaran
 		doc.tanggal_berakhir = self.tanggal_jatuh_tempo
 		doc.nominal = self.nominal
-		doc.profit_perbulan = self.profit_nasabah
-		doc.profit_pertahun = self.profit_pertahun
+		doc.profit_perbulan = self.profit_per_bulan
+		doc.profit_selama_tenor = self.profit_selama_tenor
 		# doc.append("transaksi",{
 		# 	"tanggal_transaksi":self.produk_investasi,
 		# 	"jenis_transaksi":self.status_aro,

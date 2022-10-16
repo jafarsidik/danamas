@@ -28,10 +28,13 @@
   "status_penarikan_dana",
   "section_break_18",
   "profit",
-  "management_fee",
+  "profit_per_tenor",
   "column_break_19",
-  "profit_nasabah",
-  "profit_pertahun",
+  "management_fee",
+  "management_fee_perternor",
+  "column_break_26",
+  "profit_per_bulan",
+  "profit_selama_tenor",
   "section_break_21",
   "nama_bank",
   "column_break_23",
@@ -98,7 +101,7 @@
   {
    "fieldname": "rate",
    "fieldtype": "Percent",
-   "label": "Rate",
+   "label": "Rate (%)",
    "reqd": 1
   },
   {
@@ -117,12 +120,6 @@
    "fieldname": "management_fee",
    "fieldtype": "Currency",
    "label": "Mangement Fee",
-   "read_only": 1
-  },
-  {
-   "fieldname": "profit_nasabah",
-   "fieldtype": "Currency",
-   "label": "Profit Yg Dibayarkan Perbulan",
    "read_only": 1
   },
   {
@@ -204,18 +201,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "penarikan_komisi",
-   "fieldtype": "Select",
-   "label": "Penarikan Profit ",
-   "options": "Bulanan\nTahunan\nDi Awal(Diskonto)\nDi Akhir"
-  },
-  {
-   "fieldname": "profit_pertahun",
-   "fieldtype": "Currency",
-   "label": "Profit Yang Dibayarkan Pertahun",
-   "read_only": 1
-  },
-  {
    "fetch_from": "nasabah.nama_lengkap",
    "fieldname": "nama_nasabah",
    "fieldtype": "Read Only",
@@ -240,6 +225,42 @@
    "fieldtype": "Data",
    "label": "Status Penarikan Dana",
    "read_only": 1
+  },
+  {
+   "fieldname": "profit_per_tenor",
+   "fieldtype": "Currency",
+   "label": "Profit Per Tenor",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "management_fee_perternor",
+   "fieldtype": "Currency",
+   "label": "Management Fee Per Tenor",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "profit_per_bulan",
+   "fieldtype": "Currency",
+   "label": "Profit Per Bulan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "profit_selama_tenor",
+   "fieldtype": "Currency",
+   "label": "Profit Untuk Selama Tenor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "penarikan_komisi",
+   "fieldtype": "Select",
+   "label": "Penarikan Komisi ",
+   "options": "Bulanan\nTahunan\nDi Awal(Diskonto)\nDi Akhir"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -253,7 +274,7 @@
    "link_fieldname": "no_bilyet"
   }
  ],
- "modified": "2022-10-04 11:27:14.775989",
+ "modified": "2022-10-16 22:07:26.608042",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Investasi",

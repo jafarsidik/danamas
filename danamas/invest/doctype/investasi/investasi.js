@@ -11,10 +11,31 @@ frappe.ui.form.on('Investasi', {
 		frm.set_value('tanggal_jatuh_tempo', x);
 	},
 	tenor:function(frm){
-		let x = frappe.datetime.add_months(frm.doc.tanggal_pendaftaran, frm.doc.tenor)
-		
-		
+		let x = frappe.datetime.add_months(frm.doc.tanggal_pendaftaran, frm.doc.tenor);
 		frm.set_value('tanggal_jatuh_tempo', x);
+
+		let nominal =  frm.doc.nominal
+		let rate = ( frm.doc.rate  / 100)
+		let m_fee = ( frm.doc.m_fee  / 100)
+		let tenor = frm.doc.tenor;
+
+		let profit  = (nominal * rate);
+		let profit_per_tenor  = (nominal * rate * tenor);
+
+		let fee = (profit* m_fee);
+		let fee_per_tenor = (profit*m_fee*tenor);
+
+		let profit_per_bulan = (profit - fee);
+		let profit_selama_tenor = (profit_per_tenor - fee_per_tenor);
+
+		frm.set_value('profit', profit);
+		frm.set_value('profit_per_tenor', profit_per_tenor);
+
+		frm.set_value('management_fee', fee);
+		frm.set_value('management_fee_perternor', fee_per_tenor);
+
+		frm.set_value('profit_per_bulan', profit_per_bulan);
+		frm.set_value('profit_selama_tenor', profit_selama_tenor);
 	},
 	produk_investasi:function(frm){
 		frappe.db.get_doc('Produk Investasi',frm.doc.produk_investasi).then(result => {
@@ -28,31 +49,50 @@ frappe.ui.form.on('Investasi', {
 		let nominal =  frm.doc.nominal
 		let rate = ( frm.doc.rate  / 100)
 		let m_fee = ( frm.doc.m_fee  / 100)
+		let tenor = frm.doc.tenor;
 
 		let profit  = (nominal * rate);
+		let profit_per_tenor  = (nominal * rate * tenor);
+
 		let fee = (profit* m_fee);
-		let profit_nasabah = (profit - fee);
-		let profit_pertahun = (profit_nasabah * 12)
+		let fee_per_tenor = (profit*m_fee*tenor);
+
+		let profit_per_bulan = (profit - fee);
+		let profit_selama_tenor = (profit_per_tenor - fee_per_tenor);
+
 		frm.set_value('profit', profit);
+		frm.set_value('profit_per_tenor', profit_per_tenor);
+
 		frm.set_value('management_fee', fee);
-		frm.set_value('profit_nasabah', profit_nasabah);
-		frm.set_value('profit_pertahun', profit_pertahun);
-		
+		frm.set_value('management_fee_perternor', fee_per_tenor);
+
+		frm.set_value('profit_per_bulan', profit_per_bulan);
+		frm.set_value('profit_selama_tenor', profit_selama_tenor);
 
 	},
 	rate: function(frm){
 		let nominal =  frm.doc.nominal
 		let rate = ( frm.doc.rate  / 100)
 		let m_fee = ( frm.doc.m_fee  / 100)
+		let tenor = frm.doc.tenor;
 
 		let profit  = (nominal * rate);
+		let profit_per_tenor  = (nominal * rate * tenor);
+
 		let fee = (profit* m_fee);
-		let profit_nasabah = (profit - fee);
-		let profit_pertahun = (profit_nasabah * 12)
+		let fee_per_tenor = (profit*m_fee*tenor);
+
+		let profit_per_bulan = (profit - fee);
+		let profit_selama_tenor = (profit_per_tenor - fee_per_tenor);
+
 		frm.set_value('profit', profit);
+		frm.set_value('profit_per_tenor', profit_per_tenor);
+
 		frm.set_value('management_fee', fee);
-		frm.set_value('profit_nasabah', profit_nasabah);
-		frm.set_value('profit_pertahun', profit_pertahun);
+		frm.set_value('management_fee_perternor', fee_per_tenor);
+
+		frm.set_value('profit_per_bulan', profit_per_bulan);
+		frm.set_value('profit_selama_tenor', profit_selama_tenor);
 		
 
 	},
@@ -60,14 +100,24 @@ frappe.ui.form.on('Investasi', {
 		let nominal =  frm.doc.nominal
 		let rate = ( frm.doc.rate  / 100)
 		let m_fee = ( frm.doc.m_fee  / 100)
+		let tenor = frm.doc.tenor;
 
 		let profit  = (nominal * rate);
+		let profit_per_tenor  = (nominal * rate * tenor);
+
 		let fee = (profit* m_fee);
-		let profit_nasabah = (profit - fee);
-		let profit_pertahun = (profit_nasabah * 12)
+		let fee_per_tenor = (profit*m_fee*tenor);
+
+		let profit_per_bulan = (profit - fee);
+		let profit_selama_tenor = (profit_per_tenor - fee_per_tenor);
+
 		frm.set_value('profit', profit);
+		frm.set_value('profit_per_tenor', profit_per_tenor);
+
 		frm.set_value('management_fee', fee);
-		frm.set_value('profit_nasabah', profit_nasabah);
-		frm.set_value('profit_pertahun', profit_pertahun);
+		frm.set_value('management_fee_perternor', fee_per_tenor);
+
+		frm.set_value('profit_per_bulan', profit_per_bulan);
+		frm.set_value('profit_selama_tenor', profit_selama_tenor);
 	}
 });

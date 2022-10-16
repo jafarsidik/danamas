@@ -18,13 +18,20 @@
   "nama_nasabah",
   "marketing",
   "status_arononaro",
+  "column_break_10",
   "status_bilyet",
   "tanggal_pendaftaran",
   "tanggal_berakhir",
-  "column_break_10",
   "pokok",
-  "management_fee",
+  "rupiah_section",
   "profit",
+  "profit_per_tenor",
+  "column_break_20",
+  "management_fee",
+  "management_fee_per_tenor",
+  "column_break_23",
+  "profit_per_bulan",
+  "profit_selama_tenor",
   "section_break_15",
   "nama_bank",
   "column_break_16",
@@ -102,7 +109,7 @@
    "read_only": 1
   },
   {
-   "fetch_from": "investasi.profit_nasabah",
+   "fetch_from": "investasi.profit",
    "fieldname": "profit",
    "fieldtype": "Currency",
    "label": "Profit",
@@ -186,11 +193,52 @@
    "fieldname": "status_bilyet",
    "fieldtype": "Read Only",
    "label": "Status Bilyet"
+  },
+  {
+   "fieldname": "rupiah_section",
+   "fieldtype": "Section Break",
+   "label": "Data Profit"
+  },
+  {
+   "fetch_from": "investasi.profit_per_tenor",
+   "fieldname": "profit_per_tenor",
+   "fieldtype": "Currency",
+   "label": "Profit Per Tenor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "investasi.management_fee_perternor",
+   "fieldname": "management_fee_per_tenor",
+   "fieldtype": "Currency",
+   "label": "Management Fee Per Tenor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "investasi.profit_per_bulan",
+   "fieldname": "profit_per_bulan",
+   "fieldtype": "Currency",
+   "label": "Profit Per Bulan",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "investasi.profit_selama_tenor",
+   "fieldname": "profit_selama_tenor",
+   "fieldtype": "Currency",
+   "label": "Profit Selama Tenor",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-30 02:04:58.513298",
+ "modified": "2022-10-16 22:39:11.471301",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Transaksi Investasi",

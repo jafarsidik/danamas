@@ -16,7 +16,7 @@
   "tanggal_berakhir",
   "nominal",
   "profit_perbulan",
-  "profit_pertahun",
+  "profit_selama_tenor",
   "transaction_section",
   "transaksi"
  ],
@@ -67,13 +67,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "profit_pertahun",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Profit Pertahun",
-   "read_only": 1
-  },
-  {
    "fieldname": "transaction_section",
    "fieldtype": "Section Break"
   },
@@ -102,11 +95,18 @@
    "fieldtype": "Data",
    "label": "Nama Lengkap",
    "read_only": 1
+  },
+  {
+   "fieldname": "profit_selama_tenor",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Profit Selama Tenor",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-30 01:12:37.845454",
+ "modified": "2022-10-16 22:17:30.932929",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Estatement Investasi",
