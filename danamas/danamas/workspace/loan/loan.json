@@ -1,7 +1,7 @@
 {
  "charts": [],
  "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Loan</span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Aplikasi\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}}]",
- "creation": "2022-07-29 10:09:09.845913",
+ "creation": "2022-10-16 22:10:28.985123",
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -10,24 +10,6 @@
  "idx": 0,
  "label": "Loan",
  "links": [
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Master",
-   "link_count": 1,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Nasabah",
-   "link_count": 0,
-   "link_to": "Nasabah",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
   {
    "hidden": 0,
    "is_query_report": 0,
@@ -75,13 +57,50 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Master",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Nasabah",
+   "link_count": 0,
+   "link_to": "Nasabah",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Jenis Pinjaman",
+   "link_count": 0,
+   "link_to": "Jenis Pinjaman",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing",
+   "link_count": 0,
+   "link_to": "Sales",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2022-10-07 00:19:50.515042",
+ "modified": "2022-10-16 23:45:10.220109",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Loan",
- "owner": "Administrator",
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
