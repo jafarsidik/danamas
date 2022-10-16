@@ -12870,7 +12870,7 @@
  },
  {
   "charts": [],
-  "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Masters</b></span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Marketplace\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Payments\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}}]",
+  "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Marketplace\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Payments\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}}]",
   "docstatus": 0,
   "doctype": "Workspace",
   "for_user": "admin@dmi.co.id",
@@ -13007,7 +13007,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2022-10-17 02:03:19.689677",
+  "modified": "2022-10-17 02:05:05.532270",
   "module": "ERPNext Integrations",
   "name": "ERPNext Integrations-admin@dmi.co.id",
   "parent_page": "",
