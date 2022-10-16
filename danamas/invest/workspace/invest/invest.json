@@ -1,7 +1,7 @@
 {
  "charts": [],
  "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Investasi</span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Investasi\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reporting\",\"col\":4}}]",
- "creation": "2022-10-16 22:10:29.212423",
+ "creation": "2022-10-17 01:29:09.770056",
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -115,15 +115,15 @@
    "type": "Link"
   }
  ],
- "modified": "2022-10-16 23:01:57.248609",
- "modified_by": "Administrator",
+ "modified": "2022-10-17 01:57:41.574304",
+ "modified_by": "admin@dmi.co.id",
  "module": "Invest",
  "name": "Invest",
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 14.0,
+ "sequence_id": 17.0,
  "shortcuts": [],
  "title": "Invest"
 }
