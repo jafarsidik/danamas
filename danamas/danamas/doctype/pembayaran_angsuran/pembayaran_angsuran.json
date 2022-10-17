@@ -86,7 +86,6 @@
    "fieldname": "kelebihan_pembayaran",
    "fieldtype": "Currency",
    "label": "Kelebihan Pembayaran",
-   "non_negative": 1,
    "read_only": 1
   },
   {
@@ -151,7 +150,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-05 07:32:29.146086",
+ "modified": "2022-10-17 07:43:40.285800",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Pembayaran Angsuran",
