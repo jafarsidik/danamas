@@ -17,6 +17,7 @@
   "status_aro",
   "penarikan_komisi",
   "status_bilyet",
+  "pengiriman_bilyet",
   "tanggal_pendaftaran",
   "tanggal_jatuh_tempo",
   "column_break_11",
@@ -261,6 +262,12 @@
    "fieldtype": "Select",
    "label": "Penarikan Komisi ",
    "options": "Bulanan\nTahunan\nDi Awal(Diskonto)\nDi Akhir"
+  },
+  {
+   "fieldname": "pengiriman_bilyet",
+   "fieldtype": "Select",
+   "label": "Pengiriman Bilyet",
+   "options": "E-Bilyet\nFisik Bilyet"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -274,7 +281,7 @@
    "link_fieldname": "no_bilyet"
   }
  ],
- "modified": "2022-10-16 22:07:26.608042",
+ "modified": "2022-10-18 13:05:40.039309",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Investasi",

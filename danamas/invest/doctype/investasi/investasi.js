@@ -5,14 +5,13 @@ frappe.ui.form.on('Investasi', {
 	
 	tanggal_pendaftaran:function(frm){
 		let x = frappe.datetime.add_months(frm.doc.tanggal_pendaftaran, frm.doc.tenor)
-		
-		// let end = moment(frm.doc.tanggal_pendaftaran).add(frm.doc.tenor, 'M')
-		// alert(x)
-		frm.set_value('tanggal_jatuh_tempo', x);
+		let end = frappe.datetime.add_days(x, +1)
+		frm.set_value('tanggal_jatuh_tempo', end);
 	},
 	tenor:function(frm){
-		let x = frappe.datetime.add_months(frm.doc.tanggal_pendaftaran, frm.doc.tenor);
-		frm.set_value('tanggal_jatuh_tempo', x);
+		let x = frappe.datetime.add_months(frm.doc.tanggal_pendaftaran, frm.doc.tenor)
+		let end = frappe.datetime.add_days(x, +1)
+		frm.set_value('tanggal_jatuh_tempo', end);
 
 		let nominal =  frm.doc.nominal
 		let rate = ( frm.doc.rate  / 100)
