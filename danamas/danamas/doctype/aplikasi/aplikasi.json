@@ -11,13 +11,17 @@
   "nama_nasbah",
   "nama_cabang",
   "nama_kelompok",
-  "nama_bank",
-  "nama_pemilik_rekening",
-  "no_rekening",
   "column_break_2",
   "nama_sales",
   "tujuan_pembiayaan",
   "status",
+  "no_hp",
+  "data_bank_section",
+  "nama_bank",
+  "column_break_12",
+  "no_rekening",
+  "column_break_14",
+  "nama_pemilik_rekening",
   "section_break_10",
   "tanggal_pengajuan",
   "tanggal_pencairan",
@@ -412,6 +416,25 @@
    "fieldname": "no_rekening",
    "fieldtype": "Data",
    "label": "No Rekening"
+  },
+  {
+   "fieldname": "data_bank_section",
+   "fieldtype": "Section Break",
+   "label": "Data Bank"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "no_nasabah.no_hp_1",
+   "fieldname": "no_hp",
+   "fieldtype": "Data",
+   "label": "No HP"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -428,7 +451,7 @@
    "link_fieldname": "aplikasi_number"
   }
  ],
- "modified": "2022-09-06 11:15:09.051077",
+ "modified": "2022-10-18 09:56:59.749723",
  "modified_by": "Administrator",
  "module": "Danamas",
  "name": "Aplikasi",

@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:AO-{####}",
+ "autoname": "naming_series:",
  "creation": "2022-06-18 00:11:24.405591",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "personal_identity_tab",
   "personal_identity_section",
   "full_name",
@@ -115,16 +116,26 @@
    "fieldtype": "Attach Image",
    "hidden": 1,
    "label": "Picture"
+  },
+  {
+   "default": "AO-",
+   "fieldname": "naming_series",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Naming Series",
+   "no_copy": 1,
+   "options": "AO-",
+   "set_only_once": 1
   }
  ],
  "image_field": "picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-06-21 11:37:47.407068",
+ "modified": "2022-10-18 12:54:41.065131",
  "modified_by": "Administrator",
  "module": "Taburi",
  "name": "Advisor",
- "naming_rule": "Expression",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

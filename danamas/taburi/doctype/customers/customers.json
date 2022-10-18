@@ -2,12 +2,13 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:TH-{####}",
+ "autoname": "naming_series:",
  "creation": "2022-06-18 00:02:40.914391",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "personal_identity_tab",
   "personal_identity_section",
   "full_name",
@@ -169,6 +170,16 @@
    "fieldtype": "Date",
    "label": "Join Date",
    "reqd": 1
+  },
+  {
+   "default": "TH-",
+   "fieldname": "naming_series",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Naming Series",
+   "no_copy": 1,
+   "options": "TH-",
+   "set_only_once": 1
   }
  ],
  "image_field": "picture",
@@ -180,12 +191,12 @@
    "link_fieldname": "customers"
   }
  ],
- "modified": "2022-09-06 11:20:45.845228",
+ "modified": "2022-10-18 12:48:35.519220",
  "modified_by": "Administrator",
  "module": "Taburi",
  "name": "Customers",
  "name_case": "Title Case",
- "naming_rule": "Expression",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

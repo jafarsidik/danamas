@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:TRX-{#####}",
+ "autoname": "naming_series:",
  "creation": "2022-06-18 00:23:19.288402",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "transaction_date",
   "full_name",
   "saving_method",
@@ -143,15 +144,25 @@
    "label": "Debit",
    "non_negative": 1,
    "precision": "0"
+  },
+  {
+   "default": "TRX-",
+   "fieldname": "naming_series",
+   "fieldtype": "Read Only",
+   "label": "Naming Series",
+   "no_copy": 1,
+   "options": "TRX-",
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-31 04:49:13.126686",
+ "modified": "2022-10-18 12:38:21.063963",
  "modified_by": "Administrator",
  "module": "Taburi",
  "name": "Transaction",
- "naming_rule": "Expression",
+ "name_case": "Title Case",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
