@@ -6,21 +6,43 @@ from frappe.model.document import Document
 
 class Investasi(Document):
 	def after_insert(self):
-		doc = frappe.new_doc('Estatement Investasi')
-		doc.cif = self.nasabah
-		doc.no_bilyet = self.bilyet
-		doc.produk = self.produk_investasi
-		doc.status_aro = self.status_aro
-		doc.tanggal_pendaftaran = self.tanggal_pendaftaran
-		doc.tanggal_berakhir = self.tanggal_jatuh_tempo
-		doc.nominal = self.nominal
-		doc.profit_perbulan = self.profit_per_bulan
-		doc.profit_selama_tenor = self.profit_selama_tenor
-		# doc.append("transaksi",{
-		# 	"tanggal_transaksi":self.produk_investasi,
-		# 	"jenis_transaksi":self.status_aro,
-		# 	"nominal":self.tanggal_pendaftaran
-		# })
-		doc.insert()
+		docInvest = frappe.get_doc(doctype='Estatement Investasi', cif=self.nasabah)
+
+		if docInvest is None:
+			doc = frappe.new_doc('Estatement Investasi')
+			doc.cif = self.nasabah
+			doc.nama_lengkap = self.nama_nasabah
+			doc.mata_uang = 'IDR'
+			doc.append("estatement_investasi_transaksi",{
+			 	"nomor_rekening":self.no_rekening,
+			 	"tanggal_pendaftaran":self.tanggal_pendaftaran,
+			 	"tanggal_berakhir":self.tanggal_jatuh_tempo,
+			 	"produk":self.produk_investasi,
+			 	"nominal":self.nominal,
+			 	"tenor":self.tenor,
+			 	"rate":self.rate,
+			 	"status_aro":self.status_aro,
+			 	"bilyet":self.bilyet,
+			 	"status_bilyet":self.status_bilyet
+			})
+			doc.insert()
+		if docInvest is not None:
+			docInvestEl = frappe.get_doc(doctype='Estatement Investasi', cif=self.nasabah)
+			docInvestEl.cif = self.nasabah
+			docInvestEl.nama_lengkap = self.nama_nasabah
+			docInvestEl.mata_uang = 'IDR'
+			docInvestEl.append("estatement_investasi_transaksi",{
+			 	"nomor_rekening":self.no_rekening,
+			 	"tanggal_pendaftaran":self.tanggal_pendaftaran,
+			 	"tanggal_berakhir":self.tanggal_jatuh_tempo,
+			 	"produk":self.produk_investasi,
+			 	"nominal":self.nominal,
+			 	"tenor":self.tenor,
+			 	"rate":self.rate,
+			 	"status_aro":self.status_aro,
+			 	"bilyet":self.bilyet,
+			 	"status_bilyet":self.status_bilyet
+			})
+			docInvestEl.insert(ignore_if_duplicate=True)
 	def after_delete(self):
 		frappe.delete_doc('Estatement Investasi', self.nasabah+"-"+self.bilyet)

@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "format:{cif}-{no_bilyet}",
+ "autoname": "format:{cif}",
  "creation": "2022-09-29 23:38:02.276482",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -8,86 +8,17 @@
  "field_order": [
   "cif",
   "nama_lengkap",
-  "no_bilyet",
-  "produk",
-  "status_aro",
-  "column_break_5",
-  "tanggal_pendaftaran",
-  "tanggal_berakhir",
-  "nominal",
-  "profit_perbulan",
-  "profit_selama_tenor",
-  "transaction_section",
-  "transaksi"
+  "mata_uang",
+  "portofolio_section",
+  "estatement_investasi_transaksi"
  ],
  "fields": [
-  {
-   "fieldname": "produk",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Produk",
-   "options": "Produk Investasi",
-   "read_only": 1
-  },
-  {
-   "fieldname": "status_aro",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Status ARO",
-   "read_only": 1
-  },
-  {
-   "fieldname": "tanggal_pendaftaran",
-   "fieldtype": "Date",
-   "label": "Tanggal Pendaftaran",
-   "read_only": 1
-  },
-  {
-   "fieldname": "tanggal_berakhir",
-   "fieldtype": "Date",
-   "label": "Tanggal Berakhir",
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_5",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "nominal",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Nominal",
-   "read_only": 1
-  },
-  {
-   "fieldname": "profit_perbulan",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Profit Perbulan",
-   "read_only": 1
-  },
-  {
-   "fieldname": "transaction_section",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "no_bilyet",
-   "fieldtype": "Data",
-   "label": "No Bilyet",
-   "read_only": 1
-  },
   {
    "fieldname": "cif",
    "fieldtype": "Link",
    "label": "CIF",
    "options": "Nasabah Invest",
    "read_only": 1
-  },
-  {
-   "fieldname": "transaksi",
-   "fieldtype": "Table",
-   "label": "Transaksi",
-   "options": "Estatement Investasi Transaksi"
   },
   {
    "fetch_from": "cif.nama_lengkap",
@@ -97,16 +28,27 @@
    "read_only": 1
   },
   {
-   "fieldname": "profit_selama_tenor",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Profit Selama Tenor",
+   "default": "IDR",
+   "fieldname": "mata_uang",
+   "fieldtype": "Data",
+   "label": "Mata Uang",
    "read_only": 1
+  },
+  {
+   "fieldname": "portofolio_section",
+   "fieldtype": "Section Break",
+   "label": "Portofolio"
+  },
+  {
+   "fieldname": "estatement_investasi_transaksi",
+   "fieldtype": "Table",
+   "label": "Rincian Transaksi Investasi",
+   "options": "Estatement Investasi Transaksi"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-10-16 22:17:30.932929",
+ "modified": "2022-10-18 14:17:31.701757",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Estatement Investasi",
