@@ -73,7 +73,8 @@
   {
    "fieldname": "tanggal_pendaftaran",
    "fieldtype": "Date",
-   "label": "Tanggal Pendaftaran"
+   "label": "Tanggal Pendaftaran",
+   "reqd": 1
   },
   {
    "fieldname": "tanggal_jatuh_tempo",
@@ -281,7 +282,7 @@
    "link_fieldname": "no_bilyet"
   }
  ],
- "modified": "2022-10-18 13:05:40.039309",
+ "modified": "2022-10-18 19:34:34.206691",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Investasi",
@@ -302,6 +303,7 @@
    "write": 1
   }
  ],
+ "search_fields": "nama_nasabah",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

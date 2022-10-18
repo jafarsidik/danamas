@@ -6,9 +6,9 @@ from frappe.model.document import Document
 
 class Investasi(Document):
 	def after_insert(self):
-		docInvest = frappe.get_doc('Estatement Investasi',self.nasabah)
+		#docInvest = frappe.get_doc('Estatement Investasi',self.nasabah)
 
-		if docInvest is None:
+		if not frappe.db.exists('Estatement Investasi',self.nasabah):
 			doc = frappe.new_doc('Estatement Investasi')
 			doc.cif = self.nasabah
 			doc.nama_lengkap = self.nama_nasabah
@@ -26,8 +26,7 @@ class Investasi(Document):
 			 	"status_bilyet":self.status_bilyet
 			})
 			doc.insert()
-		
-		if docInvest is not None:
+		else :
 			docInvestEl = frappe.get_doc('Estatement Investasi',self.nasabah)
 			docInvestEl.append("estatement_investasi_transaksi",{
 			 	"nomor_rekening":self.no_rekening,
