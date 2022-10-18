@@ -1,7 +1,7 @@
 {
  "charts": [],
  "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Investasi</span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Investasi\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reporting\",\"col\":4}}]",
- "creation": "2022-10-17 01:29:09.770056",
+ "creation": "2022-10-17 04:12:22.609586",
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -10,34 +10,6 @@
  "idx": 0,
  "label": "Invest",
  "links": [
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Investasi",
-   "link_count": 2,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Nasabah",
-   "link_count": 0,
-   "link_to": "Nasabah Invest",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Investasi",
-   "link_count": 0,
-   "link_to": "Investasi",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
   {
    "hidden": 0,
    "is_query_report": 0,
@@ -113,9 +85,47 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Investasi",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Nasabah",
+   "link_count": 0,
+   "link_to": "Nasabah Invest",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Investasi",
+   "link_count": 0,
+   "link_to": "Investasi",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transaksi Investasi",
+   "link_count": 0,
+   "link_to": "Transaksi Investasi",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2022-10-17 04:01:53.047263",
+ "modified": "2022-10-18 14:46:25.293996",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Invest",
@@ -123,7 +133,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 11.0,
+ "sequence_id": 17.0,
  "shortcuts": [],
  "title": "Invest"
 }
