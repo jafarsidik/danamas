@@ -6,7 +6,7 @@ from frappe.model.document import Document
 
 class Investasi(Document):
 	def after_insert(self):
-		docInvest = frappe.get_doc(doctype='Estatement Investasi', cif=self.nasabah)
+		docInvest = frappe.get_doc('Estatement Investasi',self.nasabah)
 
 		if docInvest is None:
 			doc = frappe.new_doc('Estatement Investasi')
@@ -26,11 +26,9 @@ class Investasi(Document):
 			 	"status_bilyet":self.status_bilyet
 			})
 			doc.insert()
+		
 		if docInvest is not None:
-			docInvestEl = frappe.get_doc(doctype='Estatement Investasi', cif=self.nasabah)
-			docInvestEl.cif = self.nasabah
-			docInvestEl.nama_lengkap = self.nama_nasabah
-			docInvestEl.mata_uang = 'IDR'
+			docInvestEl = frappe.get_doc('Estatement Investasi',self.nasabah)
 			docInvestEl.append("estatement_investasi_transaksi",{
 			 	"nomor_rekening":self.no_rekening,
 			 	"tanggal_pendaftaran":self.tanggal_pendaftaran,
@@ -43,6 +41,6 @@ class Investasi(Document):
 			 	"bilyet":self.bilyet,
 			 	"status_bilyet":self.status_bilyet
 			})
-			docInvestEl.insert(ignore_if_duplicate=True)
+			docInvestEl.save()
 	def after_delete(self):
 		frappe.delete_doc('Estatement Investasi', self.nasabah+"-"+self.bilyet)

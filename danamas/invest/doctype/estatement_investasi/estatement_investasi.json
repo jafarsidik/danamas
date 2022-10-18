@@ -16,9 +16,11 @@
   {
    "fieldname": "cif",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "CIF",
    "options": "Nasabah Invest",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fetch_from": "cif.nama_lengkap",
@@ -48,7 +50,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-10-18 14:17:31.701757",
+ "modified": "2022-10-18 16:54:39.088701",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Estatement Investasi",

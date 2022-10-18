@@ -15,11 +15,11 @@ class TransaksiInvestasi(Document):
 			inv = frappe.get_doc("Investasi",self.investasi)
 			inv.status_penarikan_dana = 'Sudah'
 			inv.save()
-	def after_insert(self):
-		doc = frappe.get_doc('Estatement Investasi',self.cif_nasabah+"-"+self.investasi)
-		doc.append("transaksi",{
-			"tanggal_transaksi":self.tanggal_transaksi,
-			"jenis_transaksi":self.transaksi_investasi,
-			"nominal":self.nominal
-		})
-		doc.save()
+	# def after_insert(self):
+	# 	doc = frappe.get_doc('Estatement Investasi',self.cif_nasabah+"-"+self.investasi)
+	# 	doc.append("transaksi",{
+	# 		"tanggal_transaksi":self.tanggal_transaksi,
+	# 		"jenis_transaksi":self.transaksi_investasi,
+	# 		"nominal":self.nominal
+	# 	})
+	# 	doc.save()
