@@ -1,5 +1,8 @@
 {
  "actions": [],
+ "allow_auto_repeat": 1,
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
  "autoname": "field:bilyet",
  "creation": "2022-08-23 00:37:05.776367",
  "doctype": "DocType",
@@ -276,13 +279,9 @@
   {
    "link_doctype": "Transaksi Investasi",
    "link_fieldname": "investasi"
-  },
-  {
-   "link_doctype": "Estatement Investasi",
-   "link_fieldname": "no_bilyet"
   }
  ],
- "modified": "2022-10-18 19:34:34.206691",
+ "modified": "2022-10-20 07:04:09.711534",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Investasi",

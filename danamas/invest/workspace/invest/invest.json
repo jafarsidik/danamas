@@ -33,44 +33,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Reporting",
-   "link_count": 3,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Rekapitulasi",
-   "link_count": 0,
-   "link_to": "Investasi",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Komisi Marketing",
-   "link_count": 0,
-   "link_to": "Komisi Marketing Investasi",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "E Statement",
-   "link_count": 0,
-   "link_to": "Estatement Investasi",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Master",
    "link_count": 1,
    "onboard": 0,
@@ -123,9 +85,47 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reporting",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rekapitulasi",
+   "link_count": 0,
+   "link_to": "Investasi",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Komisi Marketing",
+   "link_count": 0,
+   "link_to": "Komisi Marketing Investasi",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Portofolio Account Statement",
+   "link_count": 0,
+   "link_to": "Portofolio Account Estatement",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2022-10-18 14:46:25.293996",
+ "modified": "2022-10-20 07:01:09.856315",
  "modified_by": "Administrator",
  "module": "Invest",
  "name": "Invest",
